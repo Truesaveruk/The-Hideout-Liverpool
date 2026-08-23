@@ -30,14 +30,17 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-ember via-ember/70 to-ember/35" />
         </div>
         <div className="relative mx-auto flex min-h-[86svh] max-w-3xl flex-col items-center justify-center px-5 py-24 text-center md:px-8">
-          <Image
-            src="/logo-full.png"
-            alt="The Hideout Liverpool — Sauna, Cold, Sound, Reset"
-            width={1402}
-            height={1122}
-            priority
-            className="reveal h-auto w-56 md:w-72"
-          />
+          <div className="reveal relative">
+            <div aria-hidden className="absolute -inset-10 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.5)_45%,transparent_75%)]" />
+            <Image
+              src="/logo-full-solid.png"
+              alt="The Hideout Liverpool — Sauna, Cold, Sound, Reset"
+              width={1402}
+              height={1122}
+              priority
+              className="relative h-auto w-64 md:w-80 mix-blend-screen"
+            />
+          </div>
           <h1 className="display reveal mt-8 text-6xl md:text-8xl">
             Find your
             <br />
