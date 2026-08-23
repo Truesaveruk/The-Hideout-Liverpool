@@ -54,7 +54,7 @@ export default function AndrewReevesPage() {
           Andrew Reeves.
         </h1>
         <p className="display reveal mt-4 text-2xl text-brass md:text-3xl">
-          Sound therapist. Breathwork practitioner.
+          Sound. Breath. Meditation.
         </p>
         <p className="lede reveal mt-6 max-w-lg">
           Every Hideout experience is designed and delivered personally by
@@ -152,9 +152,14 @@ export default function AndrewReevesPage() {
                 Questions?
               </Link>
             </div>
-            <p className="reveal mt-4 text-xs text-steam/70">
-              Mobile sessions are quoted individually based on location, group
-              size and session length — tell us what you have in mind.
+            <p className="reveal mt-6 max-w-md text-bone">
+              Home sound baths (up to 6 people) from{" "}
+              <span className="font-display text-2xl text-brass">£180</span>.
+            </p>
+            <p className="reveal mt-2 max-w-md text-xs text-steam/70">
+              Studios, workplaces and events are quoted individually based on
+              location, group size and session length — tell us what you have
+              in mind.
             </p>
           </div>
           <div className="grid gap-4">

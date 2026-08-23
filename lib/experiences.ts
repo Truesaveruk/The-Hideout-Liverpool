@@ -17,7 +17,67 @@ export type Experience = {
   cta: string;
   /** which side of the journey thread the accent leans towards */
   accent: "heat" | "cold" | "sound" | "breath" | "all";
+  /** "session" = simple hourly sauna booking; undefined = full experience */
+  kind?: "session";
+  price?: string;
+  priceNote?: string;
+  maxGuests?: number;
+  /** true = booked on the hour (time picker shows hourly slots) */
+  hourly?: boolean;
+  /** Cal.com (or other) direct booking link. When set, Book buttons go
+   *  straight to instant booking + payment instead of the enquiry wizard. */
+  bookingUrl?: string;
 };
+
+/** Where a product's Book button should point. */
+export const bookHref = (e: Experience) =>
+  e.bookingUrl ?? `/book?experience=${e.slug}`;
+
+/** Hourly sauna sessions — simple, priced, bookable. */
+export const saunaSessions: Experience[] = [
+  {
+    slug: "open-sauna",
+    number: "S1",
+    name: "Open Sauna Session",
+    tagline: "Drop in. Heat up. Plunge.",
+    kind: "session",
+    price: "£15",
+    priceNote: "per person · 1 hour",
+    maxGuests: 4,
+    hourly: true,
+    summary:
+      "A one-hour sauna session with full use of the cold plunge. Shared with a few other guests — numbers are capped so it never feels crowded.",
+    body: [
+      "Book a slot, turn up, and take the hour at your own pace — sauna rounds, cold plunge, and time to sit out and breathe between them.",
+      "Open sessions are shared with other guests, with numbers capped so it never feels crowded.",
+      "Want the whole place to yourselves? That's Private Sauna Hire below."
+    ],
+    idealFor: ["Regular sauna-goers", "Solo visits", "A quick reset", "Trying The Hideout for the first time"],
+    cta: "Book an open session",
+    accent: "heat"
+  },
+  {
+    slug: "private-sauna-hire",
+    number: "S2",
+    name: "Private Sauna Hire",
+    tagline: "The whole sauna. Just your group.",
+    kind: "session",
+    price: "£60",
+    priceNote: "per hour · up to 6 guests",
+    maxGuests: 6,
+    hourly: true,
+    summary:
+      "The sauna and cold plunge, completely private for up to six people. £10 each when you fill it.",
+    body: [
+      "Book the whole sauna by the hour — no other guests, no sharing, just your group.",
+      "Full use of the cold plunge, and the outdoor space to relax between rounds.",
+      "Up to six people. Works out at £10 each with a full group."
+    ],
+    idealFor: ["Groups of friends", "Couples", "Birthdays", "Post-gym or post-run groups"],
+    cta: "Book private hire",
+    accent: "heat"
+  }
+];
 
 export const experiences: Experience[] = [
   {
@@ -42,7 +102,10 @@ export const experiences: Experience[] = [
       "Regular sauna and cold enthusiasts"
     ],
     cta: "Book Sauna + Cold",
-    accent: "heat"
+    accent: "heat",
+    price: "£120",
+    priceNote: "90 min · up to 4 guests",
+    maxGuests: 4
   },
   {
     slug: "sauna-sound",
@@ -66,7 +129,10 @@ export const experiences: Experience[] = [
       "People wanting something different"
     ],
     cta: "Book Sauna + Sound",
-    accent: "sound"
+    accent: "sound",
+    price: "£120",
+    priceNote: "90 min · up to 4 guests",
+    maxGuests: 4
   },
   {
     slug: "immersive-sound-journey",
@@ -90,7 +156,10 @@ export const experiences: Experience[] = [
       "Gifts for someone hard to buy for"
     ],
     cta: "Book your Sound Journey",
-    accent: "sound"
+    accent: "sound",
+    price: "£60",
+    priceNote: "60 min · 1-to-1",
+    maxGuests: 1
   },
   {
     slug: "breathwork",
@@ -112,7 +181,10 @@ export const experiences: Experience[] = [
       "Personal reset days"
     ],
     cta: "Book Breathwork",
-    accent: "breath"
+    accent: "breath",
+    price: "£120",
+    priceNote: "90 min · up to 4 guests",
+    maxGuests: 4
   },
   {
     slug: "full-hideout",
@@ -137,7 +209,55 @@ export const experiences: Experience[] = [
       "People discovering The Hideout for the first time"
     ],
     cta: "Book the Full Hideout",
-    accent: "all"
+    accent: "all",
+    price: "£120",
+    priceNote: "90 min · up to 4 guests",
+    maxGuests: 4
+  }
+];
+
+/** Sound sessions at The Hideout — priced, bookable. */
+export const soundSessions: Experience[] = [
+  {
+    slug: "group-sound-bath",
+    number: "S3",
+    name: "Group Sound Bath",
+    tagline: "Bring your people. Lie back. Listen.",
+    kind: "session",
+    price: "£100",
+    priceNote: "per hour · up to 4 guests",
+    maxGuests: 4,
+    hourly: true,
+    summary:
+      "The sound room, booked by the hour for your own group of up to four. Traditional instruments, immersive sound, an hour of switching off. £25 each with a full group.",
+    body: [
+      "Sound baths are booked by the hour — £100 for the hour, up to four guests.",
+      "Lie back on the mats while the hour moves through traditional instruments and immersive sound.",
+      "No strangers — just the people you bring. £25 each when there are four of you."
+    ],
+    idealFor: ["Groups of friends", "Birthdays", "Hen dos with a difference", "Family sessions"],
+    cta: "Book a group sound bath",
+    accent: "sound"
+  },
+  {
+    slug: "couples-sound-journey",
+    number: "S4",
+    name: "Couples Sound Journey",
+    tagline: "Two mats. One journey.",
+    kind: "session",
+    price: "£100",
+    priceNote: "60 min · for two · two vibroacoustic mats",
+    maxGuests: 2,
+    summary:
+      "The immersive sound journey for two, side by side — each on your own vibroacoustic mat, feeling the sound as well as hearing it.",
+    body: [
+      "Side by side on two specialist vibroacoustic mats, sound and low-frequency vibration experienced through the body.",
+      "Traditional instruments meet modern immersive audio in one shared journey.",
+      "A date unlike anything else in Liverpool."
+    ],
+    idealFor: ["Couples", "Anniversaries", "Date nights", "Gifts for two"],
+    cta: "Book for two",
+    accent: "sound"
   }
 ];
 

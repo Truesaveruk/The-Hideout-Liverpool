@@ -3,7 +3,10 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
-import { experiences } from "@/lib/experiences";
+import { experiences, saunaSessions, soundSessions } from "@/lib/experiences";
+
+const bookable = [...saunaSessions, ...soundSessions, ...experiences];
+const hourlySlots = ["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00"];
 import { site } from "@/lib/site";
 
 /**
@@ -49,13 +52,15 @@ export default function BookingWizard() {
     pickup: "",
     dropoff: "",
     samePickup: false,
-    withinRadius: "" as "" | "yes" | "no" | "unsure"
+    withinRadius: "" as "" | "yes" | "no" | "unsure",
+    discountCode: ""
   });
 
   const set = (k: keyof typeof form, v: string | boolean) =>
     setForm((f) => ({ ...f, [k]: v }));
 
-  const chosen = experiences.find((e) => e.slug === experience);
+  const chosen = bookable.find((e) => e.slug === experience);
+  const maxGuests = chosen?.maxGuests ?? 4;
   const concierge = mode === "concierge";
   const outsideArea = concierge && form.withinRadius === "no";
 
@@ -87,6 +92,7 @@ export default function BookingWizard() {
       `Email: ${form.email}`,
       `Mobile: ${form.mobile}`
     ];
+    if (form.discountCode) lines.push(`Discount code: ${form.discountCode}`);
     if (concierge) {
       lines.push(
         `Accommodation: ${form.accommodationName}`,
@@ -156,12 +162,16 @@ export default function BookingWizard() {
         <div>
           <h2 className="display text-3xl md:text-5xl">Choose your experience</h2>
           <div className="mt-8 grid gap-3">
-            {experiences.map((exp) => (
+            {bookable.map((exp) => (
               <button
                 key={exp.slug}
                 type="button"
-                onClick={() => setExperience(exp.slug)}
-                className={`flex items-center justify-between rounded-2xl border p-5 text-left transition-colors ${
+                onClick={() => {
+                  setExperience(exp.slug);
+                  const cap = exp.maxGuests ?? 4;
+                  if (parseInt(form.guests) > cap) set("guests", String(cap));
+                }}
+                className={`flex items-center justify-between gap-4 rounded-2xl border p-5 text-left transition-colors ${
                   experience === exp.slug
                     ? "border-brass bg-smoke"
                     : "border-bone/15 hover:border-bone/40"
@@ -171,11 +181,19 @@ export default function BookingWizard() {
                   <span className="font-display text-lg">{exp.name}</span>
                   <span className="block text-sm text-steam">{exp.tagline}</span>
                 </span>
-                {exp.badge && (
-                  <span className="hidden rounded-full border border-brass/50 px-3 py-1 text-[0.6rem] uppercase tracking-[0.14em] text-brass sm:block">
-                    {exp.badge}
-                  </span>
-                )}
+                <span className="shrink-0 text-right">
+                  {exp.price && (
+                    <span className="block font-display text-xl text-brass">{exp.price}</span>
+                  )}
+                  {exp.priceNote && (
+                    <span className="block text-[0.65rem] uppercase tracking-[0.1em] text-steam">{exp.priceNote}</span>
+                  )}
+                  {exp.badge && !exp.price && (
+                    <span className="hidden rounded-full border border-brass/50 px-3 py-1 text-[0.6rem] uppercase tracking-[0.14em] text-brass sm:block">
+                      {exp.badge}
+                    </span>
+                  )}
+                </span>
               </button>
             ))}
           </div>
@@ -190,7 +208,7 @@ export default function BookingWizard() {
             <div>
               <label className="field-label" htmlFor="b-guests">Number of guests</label>
               <select id="b-guests" className="field" value={form.guests} onChange={(e) => set("guests", e.target.value)}>
-                {["1", "2", "3", "4"].map((n) => (
+                {Array.from({ length: maxGuests }, (_, i) => String(i + 1)).map((n) => (
                   <option key={n}>{n}</option>
                 ))}
               </select>
@@ -201,11 +219,20 @@ export default function BookingWizard() {
             </div>
             <div>
               <label className="field-label" htmlFor="b-time">Preferred time</label>
-              <input id="b-time" type="time" className="field" value={form.time} onChange={(e) => set("time", e.target.value)} />
+              {chosen?.hourly ? (
+                <select id="b-time" className="field" value={form.time} onChange={(e) => set("time", e.target.value)}>
+                  <option value="">Choose an hour</option>
+                  {hourlySlots.map((t) => (
+                    <option key={t} value={t}>{t}</option>
+                  ))}
+                </select>
+              ) : (
+                <input id="b-time" type="time" className="field" value={form.time} onChange={(e) => set("time", e.target.value)} />
+              )}
             </div>
           </div>
           <p className="mt-4 text-xs text-steam/70">
-            We&apos;ll confirm availability with you directly — your preferred
+            {chosen?.hourly ? "These sessions are booked by the hour and run on the hour. " : ""}We&apos;ll confirm availability with you directly — your preferred
             slot isn&apos;t booked until we&apos;ve confirmed it.
           </p>
         </div>
@@ -227,6 +254,10 @@ export default function BookingWizard() {
             <div>
               <label className="field-label" htmlFor="b-mobile">Mobile number</label>
               <input id="b-mobile" type="tel" className="field" value={form.mobile} onChange={(e) => set("mobile", e.target.value)} />
+            </div>
+            <div className="sm:col-span-2">
+              <label className="field-label" htmlFor="b-code">Discount code (optional)</label>
+              <input id="b-code" className="field" value={form.discountCode} onChange={(e) => set("discountCode", e.target.value)} placeholder="Got a code from us? Pop it in here" />
             </div>
           </div>
 
@@ -310,6 +341,7 @@ export default function BookingWizard() {
           <h2 className="display text-3xl md:text-5xl">Nearly there.</h2>
           <dl className="mt-8 space-y-3 rounded-2xl border border-bone/10 bg-smoke p-6 text-sm">
             <Row k="Experience" v={chosen?.name ?? "—"} />
+            {chosen?.price && <Row k="Price" v={`${chosen.price} ${chosen.priceNote ?? ""}`} />}
             <Row k="Visiting" v={concierge ? "With collection (Concierge)" : "Making my own way"} />
             <Row k="Guests" v={form.guests} />
             <Row k="Preferred date" v={form.date || "—"} />

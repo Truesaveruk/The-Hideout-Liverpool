@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { experiences } from "@/lib/experiences";
+import { bookHref, experiences, saunaSessions, soundSessions } from "@/lib/experiences";
 import ExperienceCard from "@/components/ExperienceCard";
 
 export const metadata: Metadata = {
@@ -27,6 +27,30 @@ export default function ExperiencesPage() {
         {experiences.map((exp) => (
           <ExperienceCard key={exp.slug} exp={exp} full />
         ))}
+      </section>
+
+      <section className="mx-auto max-w-site px-5 pb-24 md:px-8">
+        <p className="eyebrow reveal">Sauna sessions</p>
+        <h2 className="display reveal mt-3 text-3xl md:text-5xl">
+          Or book a session: sauna and sound, simply priced.
+        </h2>
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          {[...saunaSessions, ...soundSessions].map((s) => (
+            <div key={s.slug} id={s.slug} className="reveal flex flex-col rounded-3xl border border-bone/10 bg-smoke p-8">
+              <h3 className="font-display text-2xl">{s.name}</h3>
+              <p className="display mt-3 text-5xl">
+                {s.price}
+                <span className="ml-3 text-base text-steam">{s.priceNote}</span>
+              </p>
+              <div className="mt-4 space-y-2 text-sm text-steam leading-relaxed">
+                {s.body.map((b) => <p key={b}>{b}</p>)}
+              </div>
+              <Link href={bookHref(s)} className="btn-primary mt-6 w-fit">
+                {s.cta}
+              </Link>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="border-t border-bone/10 bg-smoke">

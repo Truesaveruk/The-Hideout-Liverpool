@@ -13,12 +13,6 @@ const PHOTOS: Record<string, string> = {
   // sound room (mats, candles, warm light)
   "sound room, instruments, low light": "/photos/sound-room.jpg",
   "sound bath set up in a yoga studio": "/photos/sound-room.jpg",
-  // sauna timber interior
-  "sauna interior, warm light": "/photos/sauna-wood.jpg",
-  // sauna door / entrance
-  "the Hideout entrance, warm light": "/photos/hideout-entrance.jpg",
-  // outdoor seating between rounds
-  "two chairs, two teas, low light": "/photos/garden-seating.jpg",
   // sound-bath stills (crystal bowls & gong, low blue light)
   "the full Hideout space": "/photos/sound-bath-bowls.jpg",
   "Andrew with instruments in the sound room": "/photos/sound-bath-bowls.jpg",

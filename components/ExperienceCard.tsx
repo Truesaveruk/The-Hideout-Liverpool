@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Experience } from "@/lib/experiences";
+import { bookHref, type Experience } from "@/lib/experiences";
 import ImagePanel from "./ImagePanel";
 
 export default function ExperienceCard({
@@ -53,7 +53,7 @@ export default function ExperienceCard({
         )}
 
         <div className="mt-8 flex flex-wrap items-center gap-4">
-          <Link href={`/book?experience=${exp.slug}`} className="btn-primary">
+          <Link href={bookHref(exp)} className="btn-primary">
             {exp.cta}
           </Link>
           {!full && (

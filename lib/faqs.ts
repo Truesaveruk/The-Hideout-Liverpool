@@ -19,7 +19,11 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "Is the experience private?",
-        a: "Yes. Every booking is private. For the duration of your experience, The Hideout is yours."
+        a: "All Hideout experiences — sound, breathwork and the signature journeys — are booked privately. We also run Open Sauna Sessions (£15 per person, per hour), which are shared with a few other guests with numbers capped. They're clearly labelled when you book, so you always know which you're choosing."
+      },
+      {
+        q: "What's the difference between an Open Sauna Session and Private Sauna Hire?",
+        a: "An Open Sauna Session is £15 per person for an hour, shared with a small number of other guests, with full use of the cold plunge. Private Sauna Hire is £60 per hour for the whole sauna, just your group, up to six people — £10 each when you fill it."
       },
       {
         q: "Can I come alone?",
@@ -31,7 +35,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "How many people can attend?",
-        a: "Up to four guests per booking. For anything larger, get in touch and we'll see what we can arrange."
+        a: "Up to four guests for the 90-minute experiences, up to six for Private Sauna Hire, up to four for Group Sound Baths, two for the Couples Sound Journey, and the Immersive Sound Journey is 1-to-1. For anything larger, get in touch and we'll see what we can arrange."
       }
     ]
   },
@@ -52,7 +56,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "How long is the experience?",
-        a: "Most Hideout experiences last around 90 minutes, including time to relax with refreshments afterwards."
+        a: "Sound immersions — the 1-to-1 journey, the couples journey and group sound baths — are 60 minutes. Anything that includes the sauna runs 90 minutes, with time to relax with refreshments afterwards. Sauna sessions and hire are by the hour."
       },
       {
         q: "What should I bring?",
