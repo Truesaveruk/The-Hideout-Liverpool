@@ -11,7 +11,7 @@ body {
 }
 
 ::selection {
-  background: #c2a165;
+  background: #d2a45c;
   color: #1a1512;
 }
 
@@ -50,7 +50,7 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 summary:focus-visible {
-  outline: 2px solid #c2a165;
+  outline: 2px solid #d2a45c;
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -63,7 +63,7 @@ summary:focus-visible {
 .img-panel {
   @apply relative overflow-hidden rounded-2xl border border-bone/10;
   background:
-    radial-gradient(120% 90% at 20% 10%, rgba(194, 161, 101, 0.16), transparent 55%),
+    radial-gradient(120% 90% at 20% 10%, rgba(210, 164, 92, 0.16), transparent 55%),
     radial-gradient(100% 80% at 85% 90%, rgba(156, 107, 67, 0.22), transparent 60%),
     linear-gradient(160deg, #2e2620 0%, #241e19 45%, #1a1512 100%);
 }
@@ -90,8 +90,8 @@ summary:focus-visible {
     #9c6b43 18%,
     #6e8b94 38%,
     #8f8578 58%,
-    #c2a165 82%,
-    rgba(194, 161, 101, 0.15) 100%
+    #d2a45c 82%,
+    rgba(210, 164, 92, 0.15) 100%
   );
 }
 .thread-dot {
@@ -100,7 +100,7 @@ summary:focus-visible {
 .thread-dot[data-phase="heat"]  { background: #d08a4f; }
 .thread-dot[data-phase="cold"]  { background: #6e8b94; }
 .thread-dot[data-phase="breath"]{ background: #8f8578; }
-.thread-dot[data-phase="sound"] { background: #c2a165; }
+.thread-dot[data-phase="sound"] { background: #d2a45c; }
 .thread-dot[data-phase="still"] { background: #ede6db; }
 
 /* ------------------------------------------------------------------ */

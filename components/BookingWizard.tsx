@@ -261,7 +261,7 @@ export default function BookingWizard() {
                   type="checkbox"
                   checked={form.samePickup}
                   onChange={(e) => set("samePickup", e.target.checked)}
-                  className="mt-1 accent-[#C2A165]"
+                  className="mt-1 accent-[#D2A45C]"
                 />
                 Everyone in our booking will meet at the same pickup point.
               </label>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -29,11 +30,15 @@ export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-bone/10 bg-ember/85 backdrop-blur">
       <div className="mx-auto flex max-w-site items-center justify-between px-5 py-4 md:px-8">
-        <Link href="/" className="font-display text-lg tracking-wide">
-          THE HIDEOUT
-          <span className="ml-2 text-[0.6rem] uppercase tracking-eyebrow text-brass align-middle">
-            Liverpool
-          </span>
+        <Link href="/" aria-label="The Hideout Liverpool — home">
+          <Image
+            src="/logo-header.png"
+            alt="The Hideout Liverpool"
+            width={1402}
+            height={650}
+            priority
+            className="h-11 w-auto md:h-12"
+          />
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Main">

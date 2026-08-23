@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { experiences } from "@/lib/experiences";
@@ -23,6 +24,15 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-ember via-ember/60 to-ember/30" />
         </div>
         <div className="relative mx-auto flex min-h-[88svh] max-w-site flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-24">
+          <Image
+            src="/logo-badge.png"
+            alt=""
+            aria-hidden
+            width={1254}
+            height={1254}
+            priority
+            className="reveal mb-6 h-20 w-20 md:h-24 md:w-24"
+          />
           <p className="eyebrow reveal">Crosby · Liverpool</p>
           <h1 className="display reveal mt-4 text-6xl md:text-8xl">
             Find your
@@ -159,6 +169,22 @@ export default function HomePage() {
               Experience The Hideout together
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* PRACTITIONER STRIP -------------------------------------------- */}
+      <section className="border-t border-bone/10">
+        <div className="mx-auto flex max-w-site flex-col items-start justify-between gap-6 px-5 py-14 md:flex-row md:items-center md:px-8">
+          <div>
+            <p className="eyebrow reveal">The practitioner</p>
+            <p className="display reveal mt-2 text-2xl md:text-3xl">
+              Every session is delivered personally by Andrew Reeves —
+              <span className="text-brass"> and he&apos;ll travel to you.</span>
+            </p>
+          </div>
+          <Link href="/andrew-reeves" className="btn-ghost reveal shrink-0">
+            Meet Andrew
+          </Link>
         </div>
       </section>
 

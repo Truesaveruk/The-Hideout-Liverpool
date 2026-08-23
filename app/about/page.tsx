@@ -55,9 +55,12 @@ export default function AboutPage() {
             <p className="font-display text-xl text-bone">
               Come alone. Come together. Find your Hideout.
             </p>
-            <div className="pt-2">
+            <div className="flex flex-wrap gap-4 pt-2">
               <Link href="/experiences" className="btn-primary">
                 Discover the experiences
+              </Link>
+              <Link href="/andrew-reeves" className="btn-ghost">
+                Meet Andrew
               </Link>
             </div>
           </div>

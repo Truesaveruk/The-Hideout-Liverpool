@@ -69,3 +69,13 @@ Beach / Another Place, Liverpool waterfront. Replace placeholders with
   placeholders only).
 - Any supplier/brand names for the vibroacoustic equipment.
 - Medical claims of any kind.
+
+## Brand assets
+
+- `public/logo-header.png` — wordmark only (transparent), used in the header
+- `public/logo-wordmark.png` — full lockup with the four pillars (transparent), used in the footer
+- `public/logo-badge.png` — circular badge (transparent), used in the hero
+- `public/brand/` — original black-background artwork for social/print
+- `app/icon.png` / `app/apple-icon.png` / `app/opengraph-image.png` — favicon, iOS icon and social share image, generated from the badge
+
+The site's brass accent (#D2A45C) is sampled from the logo gold so UI and artwork match.

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 
@@ -6,8 +7,14 @@ export default function SiteFooter() {
     <footer className="border-t border-bone/10 bg-smoke">
       <div className="mx-auto grid max-w-site gap-10 px-5 py-14 md:grid-cols-3 md:px-8">
         <div>
-          <p className="font-display text-xl">THE HIDEOUT</p>
-          <p className="mt-2 text-sm text-steam">
+          <Image
+            src="/logo-wordmark.png"
+            alt="The Hideout Liverpool — Sauna, Cold, Sound, Reset"
+            width={1402}
+            height={1122}
+            className="h-auto w-48"
+          />
+          <p className="mt-4 text-sm text-steam">
             A private wellness space in {site.area}.
             <br />
             Heat. Cold. Breath. Sound. Stillness.
@@ -23,6 +30,7 @@ export default function SiteFooter() {
           <Link className="hover:text-brass" href="/prices">Prices</Link>
           <Link className="hover:text-brass" href="/gift">Gift The Hideout</Link>
           <Link className="hover:text-brass" href="/about">About</Link>
+          <Link className="hover:text-brass" href="/andrew-reeves">Andrew Reeves</Link>
           <Link className="hover:text-brass" href="/faq">FAQ</Link>
           <Link className="hover:text-brass" href="/book">Book</Link>
         </nav>

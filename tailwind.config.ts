@@ -11,7 +11,7 @@ const config: Config = {
         bone: "#EDE6DB",      // primary text
         steam: "#9C9184",     // secondary text
         cedar: "#9C6B43",     // warm wood
-        brass: "#C2A165",     // bronze accent — use sparingly
+        brass: "#D2A45C",     // bronze accent — use sparingly
         plunge: "#6E8B94"     // cold accent, used only in the journey thread
       },
       fontFamily: {
