@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-ember text-bone font-body antialiased;
+}
+
+::selection {
+  background: #c2a165;
+  color: #1a1512;
+}
+
+/* ------------------------------------------------------------------ */
+/* Type                                                                */
+/* ------------------------------------------------------------------ */
+.display {
+  @apply font-display font-medium leading-[0.98] tracking-[-0.015em];
+}
+.eyebrow {
+  @apply font-body text-[0.7rem] uppercase tracking-eyebrow text-brass;
+}
+.lede {
+  @apply text-lg md:text-xl text-steam leading-relaxed;
+}
+
+/* ------------------------------------------------------------------ */
+/* Buttons                                                             */
+/* ------------------------------------------------------------------ */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.14em] transition-colors duration-200;
+}
+.btn-primary {
+  @apply btn bg-brass text-ember hover:bg-bone;
+}
+.btn-ghost {
+  @apply btn border border-bone/25 text-bone hover:border-brass hover:text-brass;
+}
+.btn-quiet {
+  @apply text-sm uppercase tracking-[0.14em] text-steam underline underline-offset-4 decoration-brass/50 hover:text-brass transition-colors;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #c2a165;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Image placeholders                                                  */
+/* Replace with real photography of The Hideout — never stock resort   */
+/* imagery. Each placeholder is labelled with the shot it needs.       */
+/* ------------------------------------------------------------------ */
+.img-panel {
+  @apply relative overflow-hidden rounded-2xl border border-bone/10;
+  background:
+    radial-gradient(120% 90% at 20% 10%, rgba(194, 161, 101, 0.16), transparent 55%),
+    radial-gradient(100% 80% at 85% 90%, rgba(156, 107, 67, 0.22), transparent 60%),
+    linear-gradient(160deg, #2e2620 0%, #241e19 45%, #1a1512 100%);
+}
+.img-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
+.img-panel-label {
+  @apply absolute bottom-3 left-3 z-10 rounded-full border border-bone/15 bg-ember/70 px-3 py-1 text-[0.65rem] uppercase tracking-[0.16em] text-steam backdrop-blur;
+}
+
+/* ------------------------------------------------------------------ */
+/* The journey thread — the site's signature element.                  */
+/* A vertical thread that shifts from ember heat, through cold,        */
+/* into brass stillness.                                               */
+/* ------------------------------------------------------------------ */
+.thread {
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    #d08a4f 0%,
+    #9c6b43 18%,
+    #6e8b94 38%,
+    #8f8578 58%,
+    #c2a165 82%,
+    rgba(194, 161, 101, 0.15) 100%
+  );
+}
+.thread-dot {
+  @apply h-2.5 w-2.5 rounded-full border border-ember;
+}
+.thread-dot[data-phase="heat"]  { background: #d08a4f; }
+.thread-dot[data-phase="cold"]  { background: #6e8b94; }
+.thread-dot[data-phase="breath"]{ background: #8f8578; }
+.thread-dot[data-phase="sound"] { background: #c2a165; }
+.thread-dot[data-phase="still"] { background: #ede6db; }
+
+/* ------------------------------------------------------------------ */
+/* Reveal on scroll (respects reduced motion)                          */
+/* ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: reveal 0.9s ease forwards;
+    animation-timeline: view();
+    animation-range: entry 0% entry 30%;
+  }
+  @keyframes reveal {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .drift {
+    animation: drift 26s ease-in-out infinite alternate;
+  }
+  @keyframes drift {
+    from { transform: translate3d(-2%, 0, 0) scale(1.02); }
+    to   { transform: translate3d(2%, -1%, 0) scale(1.05); }
+  }
+}
+
+/* FAQ accordions */
+details.faq summary::-webkit-details-marker { display: none; }
+details.faq summary { list-style: none; }
+details.faq[open] .faq-icon { transform: rotate(45deg); }
+.faq-icon { transition: transform 0.2s ease; }
+
+/* Form fields */
+.field {
+  @apply w-full rounded-xl border border-bone/15 bg-smoke px-4 py-3 text-bone placeholder:text-steam/60 focus:border-brass;
+}
+.field-label {
+  @apply mb-1.5 block text-xs uppercase tracking-[0.14em] text-steam;
+}
