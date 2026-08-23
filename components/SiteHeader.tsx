@@ -28,50 +28,63 @@ export default function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-bone/10 bg-ember/85 backdrop-blur">
-      <div className="mx-auto flex max-w-site items-center justify-between px-5 py-3 md:px-8 md:py-4">
+    <header className="sticky top-0 z-40 border-b border-bone/10 bg-ember/90 backdrop-blur">
+      {/* Mobile: centred logo, burger on the right */}
+      <div className="relative flex items-center justify-center px-5 py-3 lg:hidden">
         <Link href="/" aria-label="The Hideout Liverpool — home">
           <Image
-            src="/logo-header.png"
-            alt="The Hideout Liverpool"
-            width={1216}
-            height={365}
+            src="/logo-full.png"
+            alt="The Hideout Liverpool — Sauna, Cold, Sound, Reset"
+            width={1402}
+            height={1122}
             priority
-            className="h-14 w-auto md:h-[76px]"
+            className="h-24 w-auto"
           />
         </Link>
-
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Main">
-          {nav.slice(1).map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`text-xs uppercase tracking-[0.14em] transition-colors hover:text-brass ${
-                pathname === item.href ? "text-brass" : "text-bone/80"
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
-          <Link href="/book" className="btn-primary !px-5 !py-2.5">
-            Book
-          </Link>
-        </nav>
-
         <button
           type="button"
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+          className="absolute right-4 top-3 flex h-10 w-10 flex-col items-center justify-center gap-1.5"
         >
           <span className={`h-px w-6 bg-bone transition-transform ${open ? "translate-y-[3.5px] rotate-45" : ""}`} />
           <span className={`h-px w-6 bg-bone transition-transform ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`} />
         </button>
       </div>
 
+      {/* Desktop: big centred logo, nav centred underneath */}
+      <div className="hidden flex-col items-center px-8 pb-5 pt-6 lg:flex">
+        <Link href="/" aria-label="The Hideout Liverpool — home">
+          <Image
+            src="/logo-full.png"
+            alt="The Hideout Liverpool — Sauna, Cold, Sound, Reset"
+            width={1402}
+            height={1122}
+            priority
+            className="h-36 w-auto xl:h-40"
+          />
+        </Link>
+        <nav className="mt-6 flex items-center gap-8" aria-label="Main">
+          {nav.slice(1).map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`text-xs uppercase tracking-[0.16em] transition-colors hover:text-brass ${
+                pathname === item.href ? "text-brass" : "text-bone/80"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <Link href="/book" className="btn-primary !px-6 !py-2.5">
+            Book
+          </Link>
+        </nav>
+      </div>
+
       {open && (
-        <div className="fixed inset-0 top-[65px] z-40 flex flex-col bg-ember px-6 pt-8 lg:hidden">
+        <div className="fixed inset-0 top-[120px] z-40 flex flex-col bg-ember px-6 pt-8 lg:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {nav.map((item) => (
               <Link

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { experiences } from "@/lib/experiences";
+import { bookHref, experiences, saunaSessions } from "@/lib/experiences";
 import ExperienceCard from "@/components/ExperienceCard";
 import ImagePanel from "@/components/ImagePanel";
 import JourneyThread from "@/components/JourneyThread";
@@ -30,15 +30,6 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-ember via-ember/70 to-ember/35" />
         </div>
         <div className="relative mx-auto flex min-h-[88svh] max-w-site flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-24">
-          <Image
-            src="/logo-badge.png"
-            alt=""
-            aria-hidden
-            width={1254}
-            height={1254}
-            priority
-            className="reveal mb-6 h-20 w-20 md:h-24 md:w-24"
-          />
           <p className="eyebrow reveal">Crosby · Liverpool</p>
           <h1 className="display reveal mt-4 text-6xl md:text-8xl">
             Find your
@@ -126,6 +117,30 @@ export default function HomePage() {
         <div className="mt-12 space-y-6">
           {experiences.map((exp) => (
             <ExperienceCard key={exp.slug} exp={exp} />
+          ))}
+        </div>
+      </section>
+
+      {/* SAUNA SESSIONS ------------------------------------------------ */}
+      <section className="mx-auto max-w-site px-5 pb-24 md:px-8 md:pb-36">
+        <p className="eyebrow reveal">Just want the sauna?</p>
+        <h2 className="display reveal mt-3 max-w-xl text-4xl md:text-6xl">
+          Sauna sessions, by the hour.
+        </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {saunaSessions.map((s) => (
+            <div key={s.slug} className="reveal flex flex-col rounded-3xl border border-bone/10 bg-smoke p-8">
+              <h3 className="font-display text-2xl md:text-3xl">{s.name}</h3>
+              <p className="mt-1 font-display italic text-brass/90">{s.tagline}</p>
+              <p className="display mt-5 text-5xl">
+                {s.price}
+                <span className="ml-3 text-base text-steam">{s.priceNote}</span>
+              </p>
+              <p className="mt-4 flex-1 text-steam leading-relaxed">{s.summary}</p>
+              <Link href={bookHref(s)} className="btn-primary mt-6 w-fit">
+                {s.cta}
+              </Link>
+            </div>
           ))}
         </div>
       </section>
