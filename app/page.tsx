@@ -19,9 +19,15 @@ export default function HomePage() {
       {/* HERO ---------------------------------------------------------- */}
       <section className="relative overflow-hidden">
         <div aria-hidden className="absolute inset-0">
-          {/* Replace with cinematic photo/video of the real Hideout */}
-          <div className="img-panel drift h-full w-full !rounded-none !border-0 opacity-70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-ember via-ember/60 to-ember/30" />
+          <Image
+            src="/photos/sound-room.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="drift object-cover opacity-80"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-ember via-ember/70 to-ember/35" />
         </div>
         <div className="relative mx-auto flex min-h-[88svh] max-w-site flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-24">
           <Image

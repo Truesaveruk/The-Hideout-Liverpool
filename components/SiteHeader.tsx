@@ -29,15 +29,15 @@ export default function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-bone/10 bg-ember/85 backdrop-blur">
-      <div className="mx-auto flex max-w-site items-center justify-between px-5 py-4 md:px-8">
+      <div className="mx-auto flex max-w-site items-center justify-between px-5 py-3 md:px-8 md:py-4">
         <Link href="/" aria-label="The Hideout Liverpool — home">
           <Image
-            src="/logo-hideout.png"
+            src="/logo-header.png"
             alt="The Hideout Liverpool"
-            width={1402}
-            height={194}
+            width={1216}
+            height={365}
             priority
-            className="h-6 w-auto md:h-7"
+            className="h-14 w-auto md:h-[76px]"
           />
         </Link>
 
