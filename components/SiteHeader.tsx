@@ -32,12 +32,12 @@ export default function SiteHeader() {
       <div className="mx-auto flex max-w-site items-center justify-between px-5 py-4 md:px-8">
         <Link href="/" aria-label="The Hideout Liverpool — home">
           <Image
-            src="/logo-header.png"
+            src="/logo-hideout.png"
             alt="The Hideout Liverpool"
             width={1402}
-            height={650}
+            height={194}
             priority
-            className="h-11 w-auto md:h-12"
+            className="h-6 w-auto md:h-7"
           />
         </Link>
 
