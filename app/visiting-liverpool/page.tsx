@@ -138,16 +138,15 @@ export default function VisitingPage() {
           <p className="reveal mt-4 max-w-md text-steam">
             For 90-minute Concierge experiences:
           </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {conciergePricing.map((tier) => (
               <div
                 key={tier.id}
-                className="reveal flex flex-col rounded-3xl border border-bone/10 bg-ember p-8"
+                className="reveal flex flex-col rounded-3xl border border-bone/10 bg-ember p-6"
               >
                 <p className="eyebrow">{tier.guests}</p>
-                <p className="display mt-3 text-6xl">
+                <p className="display mt-3 text-5xl">
                   {tier.price}
-                  <span className="ml-2 text-lg text-steam">{tier.per}</span>
                 </p>
                 {tier.highlight && (
                   <p className="mt-3 w-fit rounded-full border border-brass/50 px-3 py-1 text-xs uppercase tracking-[0.14em] text-brass">

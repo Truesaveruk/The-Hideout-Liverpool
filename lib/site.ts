@@ -19,9 +19,9 @@ export const site = {
 
 export const conciergePricing = [
   {
-    id: "duo",
-    guests: "1–2 guests",
-    price: "£150",
+    id: "solo",
+    guests: "1 guest",
+    price: "£100",
     per: "total",
     includes: [
       "90-minute private Hideout experience",
@@ -31,11 +31,36 @@ export const conciergePricing = [
     ]
   },
   {
-    id: "group",
-    guests: "Up to 4 guests",
-    price: "£250",
+    id: "two",
+    guests: "2 guests",
+    price: "£150",
     per: "total",
-    highlight: "£62.50 each when four people attend",
+    highlight: "£75 each",
+    includes: [
+      "90-minute private Hideout experience",
+      "Refreshments",
+      "Collection",
+      "Return journey"
+    ]
+  },
+  {
+    id: "three",
+    guests: "3 guests",
+    price: "£200",
+    per: "total",
+    includes: [
+      "90-minute private Hideout experience",
+      "Refreshments",
+      "Collection",
+      "Return journey"
+    ]
+  },
+  {
+    id: "four",
+    guests: "4 guests",
+    price: "£220",
+    per: "total",
+    highlight: "£55 each when four attend",
     includes: [
       "90-minute private Hideout experience",
       "Refreshments",

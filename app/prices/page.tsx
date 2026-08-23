@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { experiences } from "@/lib/experiences";
+import { bookHref, experiences, saunaSessions, soundSessions } from "@/lib/experiences";
 import { conciergePricing } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -8,11 +8,6 @@ export const metadata: Metadata = {
   description:
     "Simple, all-in pricing for private Hideout experiences in Crosby, Liverpool. Concierge bookings from £150 including collection, your experience and refreshments."
 };
-
-// LOCAL PRICING: add confirmed prices here when set, e.g. { "sauna-cold": "£70" }.
-// Until then the page shows an honest "confirmed when you book" state rather
-// than invented numbers.
-const localPrices: Record<string, string> = {};
 
 export default function PricesPage() {
   return (
@@ -31,8 +26,50 @@ export default function PricesPage() {
       {/* LOCAL --------------------------------------------------------- */}
       <section className="mx-auto max-w-site px-5 pb-20 md:px-8">
         <h2 className="display reveal text-3xl md:text-4xl">
-          Making your own way here
+          Sauna sessions
         </h2>
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          {saunaSessions.map((s) => (
+            <div key={s.slug} className="reveal flex flex-col rounded-3xl border border-bone/10 bg-smoke p-8">
+              <p className="font-display text-2xl">{s.name}</p>
+              <p className="display mt-3 text-5xl">
+                {s.price}
+                <span className="ml-3 text-base text-steam">{s.priceNote}</span>
+              </p>
+              <p className="mt-4 flex-1 text-sm text-steam leading-relaxed">{s.summary}</p>
+              <Link href={bookHref(s)} className="btn-primary mt-6 w-fit">
+                Book
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="display reveal mt-16 text-3xl md:text-4xl">
+          Sound sessions
+        </h2>
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          {soundSessions.map((s) => (
+            <div key={s.slug} className="reveal flex flex-col rounded-3xl border border-bone/10 bg-smoke p-8">
+              <p className="font-display text-2xl">{s.name}</p>
+              <p className="display mt-3 text-5xl">
+                {s.price}
+                <span className="ml-3 text-base text-steam">{s.priceNote}</span>
+              </p>
+              <p className="mt-4 flex-1 text-sm text-steam leading-relaxed">{s.summary}</p>
+              <Link href={bookHref(s)} className="btn-primary mt-6 w-fit">
+                Book
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="display reveal mt-16 text-3xl md:text-4xl">
+          The 90-minute experiences
+        </h2>
+        <p className="reveal mt-3 max-w-md text-steam">
+          One price. Choose your journey. Every experience is fully private,
+          hosted, and finishes with refreshments.
+        </p>
         <div className="mt-8 grid gap-4">
           {experiences.map((exp) => (
             <div
@@ -44,8 +81,9 @@ export default function PricesPage() {
                 <p className="text-sm text-steam">{exp.tagline}</p>
               </div>
               <div className="flex items-center gap-5">
-                <p className="text-sm text-steam">
-                  {localPrices[exp.slug] ?? "Price confirmed when you book"}
+                <p className="text-right">
+                  <span className="font-display text-2xl text-brass">{exp.price}</span>
+                  <span className="block text-xs text-steam">{exp.priceNote}</span>
                 </p>
                 <Link
                   href={`/book?experience=${exp.slug}`}
@@ -68,16 +106,15 @@ export default function PricesPage() {
           <p className="reveal mt-3 max-w-md text-steam">
             90-minute Concierge experiences, everything included:
           </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {conciergePricing.map((tier) => (
               <div
                 key={tier.id}
-                className="reveal rounded-3xl border border-bone/10 bg-ember p-8"
+                className="reveal rounded-3xl border border-bone/10 bg-ember p-6"
               >
                 <p className="eyebrow">{tier.guests}</p>
-                <p className="display mt-3 text-6xl">
+                <p className="display mt-3 text-5xl">
                   {tier.price}
-                  <span className="ml-2 text-lg text-steam">{tier.per}</span>
                 </p>
                 {tier.highlight && (
                   <p className="mt-3 w-fit rounded-full border border-brass/50 px-3 py-1 text-xs uppercase tracking-[0.14em] text-brass">
