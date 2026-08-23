@@ -5,13 +5,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ember: "#1A1512",     // warm near-black background
-        smoke: "#241E19",     // raised surfaces
-        hearth: "#2E2620",    // cards / borders base
-        bone: "#EDE6DB",      // primary text
-        steam: "#9C9184",     // secondary text
-        cedar: "#9C6B43",     // warm wood
-        brass: "#D2A45C",     // bronze accent — use sparingly
+        ember: "#0A0A0A",     // near-black background
+        smoke: "#141414",     // raised surfaces
+        hearth: "#1E1E1E",    // cards / borders base
+        bone: "#F2ECE0",      // primary text (warm white)
+        steam: "#9A9488",     // secondary text
+        cedar: "#B8863B",     // deep gold
+        brass: "#D4AF5A",     // gold accent
         plunge: "#6E8B94"     // cold accent, used only in the journey thread
       },
       fontFamily: {
