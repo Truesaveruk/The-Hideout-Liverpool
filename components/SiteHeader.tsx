@@ -29,16 +29,16 @@ export default function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-bone/10 bg-ember/90 backdrop-blur">
-      {/* Mobile: centred logo, burger on the right */}
-      <div className="relative flex items-center justify-center px-5 py-3 lg:hidden">
+      {/* Mobile: slim wordmark left, burger right */}
+      <div className="flex items-center justify-between px-5 py-3 lg:hidden">
         <Link href="/" aria-label="The Hideout Liverpool — home">
           <Image
-            src="/logo-full.png"
-            alt="The Hideout Liverpool — Sauna, Cold, Sound, Reset"
-            width={1402}
-            height={1122}
+            src="/logo-header.png"
+            alt="The Hideout Liverpool"
+            width={1216}
+            height={365}
             priority
-            className="h-24 w-auto"
+            className="h-7 w-auto"
           />
         </Link>
         <button
@@ -46,26 +46,26 @@ export default function SiteHeader() {
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
-          className="absolute right-4 top-3 flex h-10 w-10 flex-col items-center justify-center gap-1.5"
+          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5"
         >
           <span className={`h-px w-6 bg-bone transition-transform ${open ? "translate-y-[3.5px] rotate-45" : ""}`} />
           <span className={`h-px w-6 bg-bone transition-transform ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`} />
         </button>
       </div>
 
-      {/* Desktop: big centred logo, nav centred underneath */}
-      <div className="hidden flex-col items-center px-8 pb-5 pt-6 lg:flex">
+      {/* Desktop: slim wordmark left, nav right */}
+      <div className="mx-auto hidden max-w-site items-center justify-between px-8 py-4 lg:flex">
         <Link href="/" aria-label="The Hideout Liverpool — home">
           <Image
-            src="/logo-full.png"
-            alt="The Hideout Liverpool — Sauna, Cold, Sound, Reset"
-            width={1402}
-            height={1122}
+            src="/logo-header.png"
+            alt="The Hideout Liverpool"
+            width={1216}
+            height={365}
             priority
-            className="h-36 w-auto xl:h-40"
+            className="h-9 w-auto"
           />
         </Link>
-        <nav className="mt-6 flex items-center gap-8" aria-label="Main">
+        <nav className="flex items-center gap-7" aria-label="Main">
           {nav.slice(1).map((item) => (
             <Link
               key={item.href}
@@ -84,7 +84,7 @@ export default function SiteHeader() {
       </div>
 
       {open && (
-        <div className="fixed inset-0 top-[120px] z-40 flex flex-col bg-ember px-6 pt-8 lg:hidden">
+        <div className="fixed inset-0 top-[57px] z-40 flex flex-col bg-ember px-6 pt-8 lg:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {nav.map((item) => (
               <Link

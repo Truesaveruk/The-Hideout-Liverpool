@@ -29,22 +29,29 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ember via-ember/70 to-ember/35" />
         </div>
-        <div className="relative mx-auto flex min-h-[88svh] max-w-site flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-24">
-          <p className="eyebrow reveal">Crosby · Liverpool</p>
-          <h1 className="display reveal mt-4 text-6xl md:text-8xl">
+        <div className="relative mx-auto flex min-h-[86svh] max-w-3xl flex-col items-center justify-center px-5 py-24 text-center md:px-8">
+          <Image
+            src="/logo-full.png"
+            alt="The Hideout Liverpool — Sauna, Cold, Sound, Reset"
+            width={1402}
+            height={1122}
+            priority
+            className="reveal h-auto w-56 md:w-72"
+          />
+          <h1 className="display reveal mt-8 text-6xl md:text-8xl">
             Find your
             <br />
             Hideout.
           </h1>
-          <p className="lede reveal mt-6 max-w-md">
+          <p className="lede reveal mt-6">
             A private wellness space in Crosby, Liverpool.
             <br />
             Heat. Cold. Breath. Sound. Stillness.
           </p>
-          <p className="reveal mt-4 max-w-md text-steam">
+          <p className="reveal mt-4 text-steam">
             Come alone. Come together. Switch off for a while.
           </p>
-          <div className="reveal mt-8 flex flex-wrap items-center gap-4">
+          <div className="reveal mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link href="/book" className="btn-primary">
               Book The Hideout
             </Link>
@@ -52,7 +59,7 @@ export default function HomePage() {
               Explore experiences
             </Link>
           </div>
-          <Link href="/visiting-liverpool" className="btn-quiet reveal mt-6 w-fit">
+          <Link href="/visiting-liverpool" className="btn-quiet reveal mt-6">
             Visiting Liverpool?
           </Link>
         </div>
