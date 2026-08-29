@@ -22,7 +22,10 @@ const PHOTOS: Record<string, string> = {
   "sauna stove, glowing": "/photos/sauna-interior.jpg",
   // cold plunge with sauna glow behind
   "two chairs, two teas, low light": "/photos/cold-plunge.jpg",
-  "the full Hideout space": "/photos/cold-plunge.jpg",
+  "the full Hideout space": "/photos/sound-bath-candles.jpg",
+  "guest resting, soft blankets": "/photos/sound-room-wide.jpg",
+  "voucher with dried botanicals, wood surface": "/photos/sound-bath-candles.jpg",
+
   // detail tiles
   "instruments detail": "/photos/bowls-detail.jpg",
   "bowls & gong detail": "/photos/bowls-detail.jpg",
