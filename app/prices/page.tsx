@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { bookHref, experiences, saunaSessions, soundSessions } from "@/lib/experiences";
 import { conciergePricing } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Prices — Private Hideout Experiences & Concierge Bookings",
@@ -133,9 +134,9 @@ export default function PricesPage() {
             ))}
           </div>
           <div className="reveal mt-10 flex flex-wrap gap-4">
-            <Link href="/book?mode=concierge" className="btn-primary">
+            <a target="_blank" rel="noopener" href={site.bookingUrl} className="btn-primary">
               Book with collection
-            </Link>
+            </a>
             <Link href="/visiting-liverpool" className="btn-quiet">
               How collection works
             </Link>

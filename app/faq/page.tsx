@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { faqGroups } from "@/lib/faqs";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "FAQ — Everything You Need to Know Before You Visit",
@@ -58,9 +59,9 @@ export default function FaqPage() {
             Ask us anything — or just come and find out.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
-            <Link href="/book" className="btn-primary">
+            <a target="_blank" rel="noopener" href={site.bookingUrl} className="btn-primary">
               Book The Hideout
-            </Link>
+            </a>
           </div>
         </div>
       </section>

@@ -32,7 +32,7 @@ export default function SiteFooter() {
           <Link className="hover:text-brass" href="/about">About</Link>
           <Link className="hover:text-brass" href="/andrew-reeves">Andrew Reeves</Link>
           <Link className="hover:text-brass" href="/faq">FAQ</Link>
-          <Link className="hover:text-brass" href="/book">Book</Link>
+          <a className="hover:text-brass" href={site.bookingUrl} target="_blank" rel="noopener">Book</a>
         </nav>
 
         <div className="text-sm text-steam">

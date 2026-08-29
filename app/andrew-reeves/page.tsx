@@ -172,6 +172,48 @@ export default function AndrewReevesPage() {
         </div>
       </section>
 
+      {/* BREATHWORK — ANDY BLAKEMORE ------------------------------------ */}
+      <section className="border-t border-bone/10">
+        <div className="mx-auto max-w-site px-5 py-20 md:px-8 md:py-28">
+          <div className="grid gap-12 md:grid-cols-2 md:items-center">
+            <ImagePanel label="breathwork session, candlelit room" ratio="aspect-[4/3]" />
+            <div>
+              <p className="eyebrow reveal">Breathwork at The Hideout</p>
+              <h2 className="display reveal mt-3 text-4xl md:text-5xl">
+                Guided breathwork with Andy Blakemore.
+              </h2>
+              <div className="reveal mt-6 max-w-md space-y-4 text-steam leading-relaxed">
+                <p>
+                  Alongside Andrew&apos;s own practice, The Hideout hosts guided
+                  breathwork led by trained facilitator Andy Blakemore.
+                </p>
+                <p>
+                  Andy&apos;s sessions use conscious connected breathing and
+                  somatic enquiry — a gentle, accessible way to release tension,
+                  settle the mind and reconnect with the body.
+                </p>
+                <p>
+                  No experience needed. You&apos;ll be introduced to the practice
+                  and guided the whole way through, finishing with time to rest.
+                </p>
+                <p className="text-bone">
+                  Andy Blakemore is a trained conscious connected breathwork
+                  facilitator and somatic enquiry practitioner.
+                </p>
+              </div>
+              <a
+                href={site.bookingUrl}
+                target="_blank"
+                rel="noopener"
+                className="btn-primary reveal mt-8"
+              >
+                Book breathwork
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CROSS-SELL BACK TO THE HIDEOUT --------------------------------- */}
       <section className="border-t border-bone/10 bg-smoke">
         <div className="mx-auto max-w-site px-5 py-20 text-center md:px-8">
@@ -186,9 +228,9 @@ export default function AndrewReevesPage() {
             <Link href="/experiences" className="btn-ghost">
               View experiences
             </Link>
-            <Link href="/book" className="btn-primary">
+            <a target="_blank" rel="noopener" href={site.bookingUrl} className="btn-primary">
               Book The Hideout
-            </Link>
+            </a>
           </div>
         </div>
       </section>

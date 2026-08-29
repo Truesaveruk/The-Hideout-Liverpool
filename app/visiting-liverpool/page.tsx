@@ -38,9 +38,9 @@ export default function VisitingPage() {
             We&apos;ll come and get you.
           </p>
           <div className="reveal mt-8">
-            <Link href="/book?mode=concierge" className="btn-primary">
+            <a target="_blank" rel="noopener" href={site.bookingUrl} className="btn-primary">
               Book with collection
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -161,12 +161,14 @@ export default function VisitingPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/book?mode=concierge"
+                <a
+                  href={site.bookingUrl}
+                  target="_blank"
+                  rel="noopener"
                   className="btn-primary mt-8 w-fit"
                 >
                   Book with collection
-                </Link>
+                </a>
               </div>
             ))}
           </div>
@@ -182,9 +184,9 @@ export default function VisitingPage() {
               <Link href="/experiences" className="btn-ghost">
                 View experiences
               </Link>
-              <Link href="/book?mode=concierge" className="btn-primary">
+              <a target="_blank" rel="noopener" href={site.bookingUrl} className="btn-primary">
                 Book with collection
-              </Link>
+              </a>
             </div>
           </div>
         </div>

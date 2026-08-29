@@ -29,9 +29,10 @@ export type Experience = {
   bookingUrl?: string;
 };
 
-/** Where a product's Book button should point. */
-export const bookHref = (e: Experience) =>
-  e.bookingUrl ?? `/book?experience=${e.slug}`;
+import { site } from "./site";
+
+/** Where a product's Book button should point — the live Fresha page. */
+export const bookHref = (_e: Experience) => site.bookingUrl;
 
 /** Hourly sauna sessions — simple, priced, bookable. */
 export const saunaSessions: Experience[] = [

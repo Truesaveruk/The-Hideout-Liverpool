@@ -14,7 +14,10 @@ export const site = {
   bookingEmail: "bookings@thehideoutliverpool.co.uk", // replace with the live inbox
   url: "https://thehideoutliverpool.co.uk", // replace with the live domain
   instagram: "", // e.g. "https://instagram.com/thehideoutliverpool"
-  collectionRadiusMiles: 8
+  collectionRadiusMiles: 8,
+  // Live Fresha booking page — all BOOK buttons point here.
+  // If your Fresha link ever changes, update this one line.
+  bookingUrl: "https://www.fresha.com/a/the-hideout-liverpool-crosby-liverpool-pwv9paxk"
 };
 
 export const conciergePricing = [

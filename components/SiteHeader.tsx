@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { site } from "@/lib/site";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -77,9 +78,9 @@ export default function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <Link href="/book" className="btn-primary !px-6 !py-2.5">
+          <a target="_blank" rel="noopener" href={site.bookingUrl} className="btn-primary !px-6 !py-2.5">
             Book
-          </Link>
+          </a>
         </nav>
       </div>
 
@@ -98,9 +99,9 @@ export default function SiteHeader() {
               </Link>
             ))}
           </nav>
-          <Link href="/book" className="btn-primary mt-8 w-full">
+          <a target="_blank" rel="noopener" href={site.bookingUrl} className="btn-primary mt-8 w-full">
             Book The Hideout
-          </Link>
+          </a>
         </div>
       )}
     </header>

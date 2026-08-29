@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { bookHref, experiences, saunaSessions, soundSessions } from "@/lib/experiences";
 import ExperienceCard from "@/components/ExperienceCard";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Private Wellness Experiences — Sauna, Cold Plunge, Sound & Breathwork",
@@ -63,9 +64,9 @@ export default function ExperiencesPage() {
             flowing journey — or visiting Liverpool? We&apos;ll come and get you.
           </p>
           <div className="reveal mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/book" className="btn-primary">
+            <a target="_blank" rel="noopener" href={site.bookingUrl} className="btn-primary">
               Book The Hideout
-            </Link>
+            </a>
             <Link href="/visiting-liverpool" className="btn-ghost">
               Visiting Liverpool?
             </Link>

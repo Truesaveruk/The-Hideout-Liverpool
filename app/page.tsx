@@ -5,6 +5,7 @@ import { bookHref, experiences, saunaSessions } from "@/lib/experiences";
 import ExperienceCard from "@/components/ExperienceCard";
 import ImagePanel from "@/components/ImagePanel";
 import JourneyThread from "@/components/JourneyThread";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title:
@@ -55,9 +56,9 @@ export default function HomePage() {
             Come alone. Come together. Switch off for a while.
           </p>
           <div className="reveal mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Link href="/book" className="btn-primary">
+            <a target="_blank" rel="noopener" href={site.bookingUrl} className="btn-primary">
               Book The Hideout
-            </Link>
+            </a>
             <Link href="/experiences" className="btn-ghost">
               Explore experiences
             </Link>
@@ -169,9 +170,9 @@ export default function HomePage() {
                 through cold and breath, into sound you can feel — and finally,
                 stillness.
               </p>
-              <Link href="/book?experience=full-hideout" className="btn-primary reveal mt-8">
+              <a target="_blank" rel="noopener" href={site.bookingUrl} className="btn-primary reveal mt-8">
                 Book the Full Hideout
-              </Link>
+              </a>
             </div>
             <JourneyThread />
           </div>
@@ -196,9 +197,9 @@ export default function HomePage() {
               Dates, anniversaries, birthdays, Liverpool weekend breaks — or no
               occasion at all. The Hideout is yours for the evening.
             </p>
-            <Link href="/book" className="btn-ghost reveal mt-8">
+            <a target="_blank" rel="noopener" href={site.bookingUrl} className="btn-ghost reveal mt-8">
               Experience The Hideout together
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -237,9 +238,9 @@ export default function HomePage() {
             <Link href="/visiting-liverpool" className="btn-primary">
               How it works
             </Link>
-            <Link href="/book?mode=concierge" className="btn-ghost">
+            <a target="_blank" rel="noopener" href={site.bookingUrl} className="btn-ghost">
               Book with collection
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -309,9 +310,9 @@ export default function HomePage() {
             Ready to find your Hideout?
           </h2>
           <div className="reveal mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/book" className="btn-primary">
+            <a target="_blank" rel="noopener" href={site.bookingUrl} className="btn-primary">
               Book The Hideout
-            </Link>
+            </a>
             <Link href="/experiences" className="btn-ghost">
               View experiences
             </Link>
