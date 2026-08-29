@@ -119,6 +119,65 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* THREE PRIMARY ROUTES ------------------------------------------ */}
+      <section className="mx-auto max-w-site px-5 py-20 md:px-8 md:py-28">
+        <p className="eyebrow reveal text-center">Where to start</p>
+        <h2 className="display reveal mx-auto mt-3 max-w-xl text-center text-4xl md:text-5xl">
+          Choose your way in.
+        </h2>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {/* Just Sauna */}
+          <a
+            href={site.bookingUrl}
+            target="_blank"
+            rel="noopener"
+            className="reveal flex flex-col rounded-3xl border border-bone/10 bg-smoke p-8 transition-colors hover:border-brass/50"
+          >
+            <p className="eyebrow">Just Sauna</p>
+            <p className="display mt-3 text-5xl">From £15</p>
+            <p className="mt-4 flex-1 text-steam leading-relaxed">
+              For sauna and cold-plunge sessions.
+            </p>
+            <span className="btn-quiet mt-6 w-fit">Book →</span>
+          </a>
+
+          {/* Private Hideout */}
+          <a
+            href={site.bookingUrl}
+            target="_blank"
+            rel="noopener"
+            className="reveal flex flex-col rounded-3xl border border-bone/10 bg-smoke p-8 transition-colors hover:border-brass/50"
+          >
+            <p className="eyebrow">Private Hideout</p>
+            <p className="display mt-3 text-5xl">From £60</p>
+            <p className="mt-4 flex-1 text-steam leading-relaxed">
+              Private use of the space, just for your group.
+            </p>
+            <span className="btn-quiet mt-6 w-fit">Book →</span>
+          </a>
+
+          {/* The Full Experience — featured */}
+          <a
+            href={site.bookingUrl}
+            target="_blank"
+            rel="noopener"
+            className="reveal flex flex-col rounded-3xl border-2 border-brass bg-gradient-to-b from-hearth to-smoke p-8 transition-transform hover:-translate-y-1"
+          >
+            <p className="eyebrow text-brass">The Full Experience</p>
+            <p className="display mt-3 text-4xl">Heat. Cold. Breath. Sound. Stillness.</p>
+            <p className="mt-4 flex-1 text-steam leading-relaxed">
+              The complete Hideout journey — our signature experience.
+            </p>
+            <span className="btn-primary mt-6 w-fit">Book the Full Hideout</span>
+          </a>
+        </div>
+        <p className="reveal mt-8 text-center">
+          <Link href="/experiences" className="btn-quiet">
+            Explore sound, breathwork &amp; other experiences →
+          </Link>
+        </p>
+      </section>
+
       {/* EXPERIENCES --------------------------------------------------- */}
       <section className="mx-auto max-w-site px-5 pb-24 md:px-8 md:pb-36">
         <p className="eyebrow reveal">The experiences</p>
@@ -210,7 +269,7 @@ export default function HomePage() {
           <div>
             <p className="eyebrow reveal">The practitioner</p>
             <p className="display reveal mt-2 text-2xl md:text-3xl">
-              Every session is delivered personally by Andrew Reeves —
+              Every experience is designed and delivered personally by Andrew Reeves —
               <span className="text-brass"> and he&apos;ll travel to you.</span>
             </p>
           </div>
@@ -271,35 +330,6 @@ export default function HomePage() {
             Take a photo before or after if you like — then put your phone away.
             Some experiences don&apos;t need to be posted to be remembered.
           </p>
-        </div>
-      </section>
-
-      {/* SOCIAL PROOF (placeholders — do not invent reviews) ----------- */}
-      <section className="mx-auto max-w-site px-5 py-24 md:px-8 md:py-32">
-        <p className="eyebrow reveal">Guests &amp; partners</p>
-        <h2 className="display reveal mt-3 text-4xl md:text-5xl">
-          What people say
-        </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {["Google reviews", "TripAdvisor reviews", "Guest testimonials"].map(
-            (label) => (
-              <div
-                key={label}
-                className="reveal rounded-2xl border border-dashed border-bone/20 p-8 text-center text-sm text-steam"
-              >
-                <p className="field-label">{label}</p>
-                Coming soon — genuine {label.toLowerCase()} will appear here
-                once our first guests have visited.
-              </div>
-            )
-          )}
-        </div>
-        <div className="reveal mt-6 rounded-2xl border border-dashed border-bone/20 p-6 text-center text-sm text-steam">
-          <p className="field-label">Accommodation partners</p>
-          Partner logos will appear here.{" "}
-          <Link href="/visiting-liverpool#partners" className="text-brass underline underline-offset-4">
-            Become a Hideout partner
-          </Link>
         </div>
       </section>
 

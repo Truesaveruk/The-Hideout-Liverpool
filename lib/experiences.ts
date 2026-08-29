@@ -254,7 +254,7 @@ export const soundSessions: Experience[] = [
     body: [
       "Side by side on two specialist vibroacoustic mats, sound and low-frequency vibration experienced through the body.",
       "Traditional instruments meet modern immersive audio in one shared journey.",
-      "A date unlike anything else in Liverpool."
+      "A completely different kind of date in Liverpool."
     ],
     idealFor: ["Couples", "Anniversaries", "Date nights", "Gifts for two"],
     cta: "Book for two",

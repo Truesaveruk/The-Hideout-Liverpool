@@ -19,8 +19,8 @@ export default function PricesPage() {
           Simple, all-in pricing.
         </h1>
         <p className="lede reveal mt-6 max-w-lg">
-          Every experience is private and includes refreshments. No hidden
-          extras, no upsells on the day.
+          Choose a completely private Hideout experience, private sauna hire,
+          or one of our limited shared sauna sessions.
         </p>
       </section>
 

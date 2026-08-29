@@ -11,7 +11,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "Where is The Hideout?",
-        a: "We're in Crosby, on the Liverpool coastline, close to Crosby Beach and Antony Gormley's Another Place. The full address is shared when you book."
+        a: "We're in Crosby, on the Liverpool coastline, close to Crosby Beach and Antony Gormley's Another Place. Full address provided after booking."
       },
       {
         q: "Is it a commercial spa?",
