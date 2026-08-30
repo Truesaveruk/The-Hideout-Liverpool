@@ -22,6 +22,8 @@ export type Experience = {
   hourly?: boolean;
   status?: "PRIVATE" | "SHARED";
   bookingUrl?: string;
+  /** Specific photo for this session. File must exist in /public/photos. */
+  photo?: string;
 };
 
 import { site } from "./site";
@@ -33,6 +35,7 @@ export const bookHref = (_e?: Experience) => site.bookingUrl;
 export const experiences: Experience[] = [
   {
     slug: "full-hideout",
+    photo: "/photos/sound-room-ai.jpg",
     number: "01",
     name: "The Full Hideout Experience",
     tagline: "Experience everything.",
@@ -56,6 +59,7 @@ export const experiences: Experience[] = [
   },
   {
     slug: "sound-immersion-1-2-1",
+    photo: "/photos/sound-room-purple.jpg",
     number: "02",
     name: "Private Sound Immersion (1-2-1)",
     tagline: "Don't just hear sound. Feel it.",
@@ -78,6 +82,7 @@ export const experiences: Experience[] = [
   },
   {
     slug: "couples-sound-journey",
+    photo: "/photos/sound-room-green.jpg",
     number: "03",
     name: "The Couples Immersive Sound Journey",
     tagline: "Two mats. One journey.",
@@ -98,6 +103,7 @@ export const experiences: Experience[] = [
   },
   {
     slug: "private-4-person-sound-bath",
+    photo: "/photos/sound-room-purple-wide.jpg",
     number: "04",
     name: "Private 4 Person Sound Bath",
     tagline: "Bring your people. Lie back.",
@@ -118,6 +124,7 @@ export const experiences: Experience[] = [
   },
   {
     slug: "breathwork",
+    photo: "/photos/sound-bath-candles.jpg",
     number: "05",
     name: "Private Breathwork",
     tagline: "Everything starts with a breath.",
@@ -143,6 +150,7 @@ export const experiences: Experience[] = [
 export const saunaSessions: Experience[] = [
   {
     slug: "open-sauna",
+    photo: "/photos/sauna-interior.jpg",
     number: "S1",
     name: "Open Sauna — Shared",
     tagline: "Drop in. Heat up. Plunge.",
@@ -164,6 +172,7 @@ export const saunaSessions: Experience[] = [
   },
   {
     slug: "private-sauna-hire",
+    photo: "/photos/sauna-exterior.jpg",
     number: "S2",
     name: "Private Sauna Hire",
     tagline: "The whole sauna. Just your group.",
@@ -190,6 +199,7 @@ export const saunaSessions: Experience[] = [
 export const sharedSessions: Experience[] = [
   {
     slug: "open-sauna-shared",
+    photo: "/photos/sauna-interior.jpg",
     number: "G1",
     name: "Open Sauna — Shared",
     tagline: "Drop in. Heat up. Plunge.",
@@ -205,6 +215,7 @@ export const sharedSessions: Experience[] = [
   },
   {
     slug: "sauna-sound-shared",
+    photo: "/photos/sauna-exterior.jpg",
     number: "G2",
     name: "Sauna & Sound — Shared",
     tagline: "From heat into stillness.",
@@ -220,6 +231,7 @@ export const sharedSessions: Experience[] = [
   },
   {
     slug: "full-journey-shared",
+    photo: "/photos/sound-room-ai.jpg",
     number: "G3",
     name: "The Full Journey — Shared",
     tagline: "The complete journey, shared.",
@@ -239,6 +251,7 @@ export const sharedSessions: Experience[] = [
 export const soundSessions: Experience[] = [
   {
     slug: "sound-immersion-1-2-1-p",
+    photo: "/photos/sound-room-purple.jpg",
     number: "SB1",
     name: "Private Sound Immersion (1-2-1)",
     tagline: "Don't just hear sound. Feel it.",
@@ -255,6 +268,7 @@ export const soundSessions: Experience[] = [
   },
   {
     slug: "couples-sound-journey-p",
+    photo: "/photos/sound-room-green.jpg",
     number: "SB2",
     name: "The Couples Immersive Sound Journey",
     tagline: "Two mats. One journey.",
@@ -271,6 +285,7 @@ export const soundSessions: Experience[] = [
   },
   {
     slug: "private-4-person-sound-bath-p",
+    photo: "/photos/sound-room-purple-wide.jpg",
     number: "SB3",
     name: "Private 4 Person Sound Bath",
     tagline: "Bring your people. Lie back.",

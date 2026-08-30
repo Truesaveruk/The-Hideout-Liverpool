@@ -200,7 +200,12 @@ export default function HomePage() {
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {saunaSessions.map((s) => (
-            <div key={s.slug} className="reveal flex flex-col rounded-3xl border border-bone/10 bg-smoke p-8">
+            <div key={s.slug} className="reveal flex flex-col overflow-hidden rounded-3xl border border-bone/10 bg-smoke">
+              <ImagePanel
+                label={s.photo ?? "sauna interior, warm light"}
+                ratio="aspect-[16/10]"
+              />
+              <div className="flex flex-1 flex-col p-8">
               <h3 className="font-display text-2xl md:text-3xl">{s.name}</h3>
               <p className="mt-1 font-display italic text-brass/90">{s.tagline}</p>
               <p className="display mt-5 text-5xl">
@@ -208,9 +213,10 @@ export default function HomePage() {
                 <span className="ml-3 text-base text-steam">{s.priceNote}</span>
               </p>
               <p className="mt-4 flex-1 text-steam leading-relaxed">{s.summary}</p>
-              <Link href={bookHref(s)} className="btn-primary mt-6 w-fit">
+              <a target="_blank" rel="noopener" href={site.bookingUrl} className="btn-primary mt-6 w-fit">
                 {s.cta}
-              </Link>
+              </a>
+              </div>
             </div>
           ))}
         </div>

@@ -80,13 +80,14 @@ export default function ExperienceCard({
       </div>
       <ImagePanel
         label={
-          exp.accent === "heat"
+          exp.photo ??
+          (exp.accent === "heat"
             ? "sauna interior, warm light"
             : exp.accent === "sound"
               ? "sound room, instruments, low light"
               : exp.accent === "breath"
                 ? "guest resting, soft blankets"
-                : "the full Hideout space"
+                : "the full Hideout space")
         }
         ratio="aspect-[4/3] md:aspect-auto md:min-h-full"
       />

@@ -92,7 +92,7 @@ export default function BringToYouPage() {
               </p>
             </div>
           </div>
-          <ImagePanel label="sound room, instruments, low light" ratio="aspect-[4/3]" />
+          <ImagePanel label="the founder in the sound room" ratio="aspect-[4/3]" />
         </div>
       </section>
 
@@ -100,7 +100,7 @@ export default function BringToYouPage() {
       <section className="border-t border-bone/10 bg-smoke">
         <div className="mx-auto max-w-site px-5 py-20 md:px-8 md:py-28">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
-            <ImagePanel label="the Hideout entrance, warm light" ratio="aspect-[4/3]" />
+            <ImagePanel label="group resting, studio setting" ratio="aspect-[4/3]" />
             <div>
               <p className="eyebrow reveal">Wellness days &amp; events</p>
               <h2 className="display reveal mt-3 text-4xl md:text-5xl">
