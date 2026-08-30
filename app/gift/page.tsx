@@ -57,15 +57,16 @@ export default function GiftPage() {
                 href={`mailto:${site.email}?subject=${encodeURIComponent("Gift voucher enquiry")}`}
                 className="btn-primary"
               >
-                Gift The Hideout
+                Request a Gift Voucher
               </a>
               <Link href="/experiences" className="btn-quiet">
                 See the experiences
               </Link>
             </div>
             <p className="reveal mt-4 text-xs text-steam/70">
-              Online voucher purchase is coming soon — for now, email us and
-              we&apos;ll arrange your voucher personally.
+              Choose any Hideout experience as a gift and we&apos;ll arrange a
+              voucher — the person you&apos;re treating simply contacts us to
+              arrange their date. Request yours and we&apos;ll sort the rest personally.
             </p>
           </div>
           <ImagePanel label="voucher with dried botanicals, wood surface" ratio="aspect-[4/3]" />

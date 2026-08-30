@@ -10,9 +10,9 @@ export const site = {
   area: "Crosby, Liverpool",
   // NAP — keep identical everywhere (Google Business Profile, Bing, TripAdvisor)
   phone: "", // e.g. "0151 000 0000" — add when confirmed
-  email: "hello@thehideoutliverpool.co.uk", // replace with the live inbox
-  bookingEmail: "bookings@thehideoutliverpool.co.uk", // replace with the live inbox
-  url: "https://thehideoutliverpool.co.uk", // replace with the live domain
+  email: "hello@thehideoutliverpool.com", // replace with the live inbox
+  bookingEmail: "bookings@thehideoutliverpool.com", // replace with the live inbox
+  url: "https://thehideoutliverpool.com", // replace with the live domain
   instagram: "", // e.g. "https://instagram.com/thehideoutliverpool"
   collectionRadiusMiles: 8,
   // Live Fresha booking page — all BOOK buttons point here.
@@ -27,7 +27,7 @@ export const conciergePricing = [
     price: "£100",
     per: "total",
     includes: [
-      "90-minute private Hideout experience",
+      "2-hour private Hideout experience",
       "Refreshments",
       "Collection",
       "Return journey"
@@ -40,7 +40,7 @@ export const conciergePricing = [
     per: "total",
     highlight: "£75 each",
     includes: [
-      "90-minute private Hideout experience",
+      "2-hour private Hideout experience",
       "Refreshments",
       "Collection",
       "Return journey"
@@ -49,10 +49,10 @@ export const conciergePricing = [
   {
     id: "three",
     guests: "3 guests",
-    price: "£200",
+    price: "£170",
     per: "total",
     includes: [
-      "90-minute private Hideout experience",
+      "2-hour private Hideout experience",
       "Refreshments",
       "Collection",
       "Return journey"
@@ -65,7 +65,7 @@ export const conciergePricing = [
     per: "total",
     highlight: "£55 each when four attend",
     includes: [
-      "90-minute private Hideout experience",
+      "2-hour private Hideout experience",
       "Refreshments",
       "Collection",
       "Return journey"

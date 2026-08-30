@@ -15,15 +15,15 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "Is it a commercial spa?",
-        a: "No — and that's the point. The Hideout is a small, homely, private space. There are no crowds, no busy changing rooms and no strangers sharing your experience."
+        a: "Most of what we offer is completely private — just you and your group. We also run a small number of shared open sessions at set times, clearly labelled as shared, for when you can't get a group together. Private experiences are never shared with strangers."
       },
       {
         q: "Is the experience private?",
-        a: "All Hideout experiences — sound, breathwork and the signature journeys — are booked privately. We also run Open Sauna Sessions (£15 per person, per hour), which are shared with a few other guests with numbers capped. They're clearly labelled when you book, so you always know which you're choosing."
+        a: "Most Hideout experiences — sound, breathwork and the signature journeys — are booked privately for just your group. We also run a small number of shared Open Group Sessions at set times (from £15 per person), clearly labelled as shared when you book, so you always know which you're choosing."
       },
       {
         q: "What's the difference between an Open Sauna Session and Private Sauna Hire?",
-        a: "An Open Sauna Session is £15 per person for an hour, shared with a small number of other guests, with full use of the cold plunge. Private Sauna Hire is £60 per hour for the whole sauna, just your group, up to six people — £10 each when you fill it."
+        a: "An Open Sauna Session is £15 per person for an hour, shared with a small number of other guests, with full use of the cold plunge. Private Sauna Hire is £60 for the whole sauna for an hour, just your group, up to six people."
       },
       {
         q: "Can I come alone?",
@@ -35,7 +35,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "How many people can attend?",
-        a: "Up to four guests for the 90-minute experiences, up to six for Private Sauna Hire, up to four for Group Sound Baths, two for the Couples Sound Journey, and the Immersive Sound Journey is 1-to-1. For anything larger, get in touch and we'll see what we can arrange."
+        a: "The Full Hideout Experience is up to four guests, Private Sauna Hire up to six, the Private 4 Person Sound Bath up to four, the Couples Sound Journey for two, and the 1-to-1 Sound Immersion is for one. For anything larger, get in touch and we'll see what we can arrange."
       }
     ]
   },
@@ -56,7 +56,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "How long is the experience?",
-        a: "Sound immersions — the 1-to-1 journey, the couples journey and group sound baths — are 60 minutes. Anything that includes the sauna runs 90 minutes, with time to relax with refreshments afterwards. Sauna sessions and hire are by the hour."
+        a: "Sound baths — the 1-to-1 immersion, the couples journey and the 4-person sound bath — are 1 hour. Private Sauna Hire and Breathwork are 1 hour. The Full Hideout Experience is 2 hours, with time to relax and refreshments. Shared sessions run 1 to 2 hours depending on the session."
       },
       {
         q: "What should I bring?",
@@ -123,11 +123,28 @@ export const faqGroups: FaqGroup[] = [
     ]
   },
   {
+    title: "Booking and cancellation",
+    faqs: [
+      {
+        q: "What is your cancellation policy?",
+        a: "Bookings can be cancelled or rescheduled with at least 48 hours' notice. Cancellations made within 48 hours of the booking time and no-shows are charged at the full booking price."
+      },
+      {
+        q: "Do I pay when I book?",
+        a: "Yes — bookings are confirmed and paid securely at the time of booking through our booking system."
+      },
+      {
+        q: "Can under-18s attend?",
+        a: "Guests under 18 can only attend by prior arrangement as part of a private booking. Please contact us before booking."
+      }
+    ]
+  },
+  {
     title: "Health and safety",
     faqs: [
       {
         q: "Is there anything I should know before booking?",
-        a: "Sauna, cold exposure and breathwork are not suitable for everyone. If you are pregnant, have a heart or circulatory condition, low or high blood pressure, epilepsy, respiratory issues, or any other health condition or concern, please seek appropriate professional medical advice before booking. Our experiences are designed for relaxation and wellbeing — they are not medical treatments and don't replace medical care. If anything doesn't feel right on the day, you're always free to skip any part of the experience."
+        a: "Sauna, cold exposure and breathwork are not suitable for everyone. If you are pregnant, have a heart or circulatory condition, low or high blood pressure, epilepsy, respiratory issues, or any other health condition or concern, please seek appropriate professional medical advice before taking part. Our experiences are designed for relaxation and wellbeing — they are not medical treatments, do not replace medical care, and we make no medical or healing claims. Please complete any relevant health and participation information before your session. You are free to skip any element of an experience at any time."
       }
     ]
   }

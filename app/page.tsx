@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title:
     "Private Sauna, Cold Plunge & Sound Experiences in Crosby | The Hideout Liverpool",
   description:
-    "Find your Hideout. A private wellness space in Crosby, Liverpool — sauna, cold plunge, breathwork and immersive sound, booked privately. No crowds. No strangers. Your space."
+    "Find your Hideout. A private wellness space in Crosby, Liverpool — sauna, cold plunge, breathwork and immersive sound. Private experiences, with limited shared sessions available."
 };
 
 export default function HomePage() {
@@ -92,8 +92,9 @@ export default function HomePage() {
                 out for a while.
               </p>
               <p>
-                No crowded sauna. No busy changing rooms. No rushing between
-                treatments. No strangers sharing your experience.
+                No crowded spa. No busy changing rooms. No rushing between
+                treatments. Private experiences, with limited shared sauna
+                sessions available.
               </p>
               <p>
                 Just your own space to slow down, reset and explore heat, cold,
@@ -325,7 +326,7 @@ export default function HomePage() {
       {/* 90 MINUTES OFFLINE -------------------------------------------- */}
       <section className="border-y border-bone/10">
         <div className="mx-auto max-w-site px-5 py-24 text-center md:px-8 md:py-32">
-          <h2 className="display reveal text-5xl md:text-7xl">90 minutes offline.</h2>
+          <h2 className="display reveal text-5xl md:text-7xl">Time to switch off.</h2>
           <p className="reveal mx-auto mt-6 max-w-md text-steam">
             Take a photo before or after if you like — then put your phone away.
             Some experiences don&apos;t need to be posted to be remembered.

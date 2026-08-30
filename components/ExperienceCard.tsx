@@ -17,14 +17,29 @@ export default function ExperienceCard({
       <div className="flex flex-col">
         <div className="flex items-center gap-4">
           <span className="eyebrow">{exp.number}</span>
+          {exp.status && (
+            <span
+              className={`rounded-full border px-3 py-1 text-[0.62rem] uppercase tracking-[0.16em] ${
+                exp.status === "PRIVATE" ? "border-brass/50 text-brass" : "border-bone/30 text-steam"
+              }`}
+            >
+              {exp.status}
+            </span>
+          )}
           {exp.badge && (
-            <span className="rounded-full border border-brass/50 px-3 py-1 text-[0.62rem] uppercase tracking-[0.16em] text-brass">
+            <span className="rounded-full border border-bone/20 px-3 py-1 text-[0.62rem] uppercase tracking-[0.16em] text-steam">
               {exp.badge}
             </span>
           )}
         </div>
         <h3 className="display mt-4 text-3xl md:text-4xl">{exp.name}</h3>
         <p className="mt-2 font-display text-lg italic text-brass/90">{exp.tagline}</p>
+        {exp.price && (
+          <p className="mt-3 text-sm text-steam">
+            <span className="font-display text-xl text-bone">{exp.price}</span>
+            {exp.priceNote ? ` · ${exp.priceNote}` : ""}
+          </p>
+        )}
 
         {full ? (
           <div className="mt-5 space-y-3 text-steam leading-relaxed">
@@ -53,9 +68,9 @@ export default function ExperienceCard({
         )}
 
         <div className="mt-8 flex flex-wrap items-center gap-4">
-          <Link href={bookHref(exp)} className="btn-primary">
+          <a href={bookHref(exp)} target="_blank" rel="noopener" className="btn-primary">
             {exp.cta}
-          </Link>
+          </a>
           {!full && (
             <Link href={`/experiences#${exp.slug}`} className="btn-quiet">
               More detail

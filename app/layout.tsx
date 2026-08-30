@@ -49,23 +49,46 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HealthAndBeautyBusiness",
+  "@id": site.url,
   name: site.name,
+  alternateName: "The Hideout",
   slogan: site.strapline,
+  description:
+    "A small, private wellness space in Crosby, Liverpool offering private sauna, cold plunge, breathwork and immersive sound experiences, plus a concierge collection service for visitors to Liverpool.",
   email: site.email,
   url: site.url,
+  image: `${site.url}/photos/sound-room.jpg`,
+  priceRange: "££",
+  currenciesAccepted: "GBP",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Crosby",
     addressRegion: "Merseyside",
     addressCountry: "GB"
   },
-  areaServed: ["Liverpool", "Crosby", "Waterloo", "Formby", "Merseyside"],
+  areaServed: ["Liverpool", "Crosby", "Waterloo", "Formby", "Blundellsands", "Merseyside"],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "07:00",
+      closes: "20:00"
+    }
+  ],
+  potentialAction: {
+    "@type": "ReserveAction",
+    target: site.bookingUrl,
+    name: "Book The Hideout"
+  },
   makesOffer: [
-    { "@type": "Offer", name: "Private Sauna + Cold Plunge Experience" },
-    { "@type": "Offer", name: "Sauna + Sound Experience" },
-    { "@type": "Offer", name: "Immersive Sound Journey" },
-    { "@type": "Offer", name: "Private Breathwork" },
-    { "@type": "Offer", name: "The Full Hideout Experience" }
+    { "@type": "Offer", name: "The Full Hideout Experience", priceCurrency: "GBP", price: "120" },
+    { "@type": "Offer", name: "Private Sauna Hire", priceCurrency: "GBP", price: "60" },
+    { "@type": "Offer", name: "Private Sound Immersion (1-2-1)", priceCurrency: "GBP", price: "60" },
+    { "@type": "Offer", name: "Couples Immersive Sound Journey", priceCurrency: "GBP", price: "80" },
+    { "@type": "Offer", name: "Private 4 Person Sound Bath", priceCurrency: "GBP", price: "100" },
+    { "@type": "Offer", name: "Private Breathwork", priceCurrency: "GBP", price: "100" },
+    { "@type": "Offer", name: "Open Sauna Session", priceCurrency: "GBP", price: "15" },
+    { "@type": "Offer", name: "Concierge Experience with Collection", priceCurrency: "GBP", price: "100" }
   ]
 };
 
