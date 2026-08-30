@@ -10,6 +10,7 @@ const nav = [
   { href: "/", label: "Home" },
   { href: "/experiences", label: "Experiences" },
   { href: "/visiting-liverpool", label: "Visiting Liverpool" },
+  { href: "/bring-the-hideout-to-you", label: "At Your Space" },
   { href: "/about", label: "About" },
   { href: "/prices", label: "Prices" },
   { href: "/gift", label: "Gift The Hideout" },

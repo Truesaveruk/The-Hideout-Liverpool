@@ -27,6 +27,7 @@ export default function SiteFooter() {
         <nav aria-label="Footer" className="grid grid-cols-2 gap-2 text-sm text-steam">
           <Link className="hover:text-brass" href="/experiences">Experiences</Link>
           <Link className="hover:text-brass" href="/visiting-liverpool">Visiting Liverpool</Link>
+          <Link className="hover:text-brass" href="/bring-the-hideout-to-you">At Your Space</Link>
           <Link className="hover:text-brass" href="/prices">Prices</Link>
           <Link className="hover:text-brass" href="/gift">Gift The Hideout</Link>
           <Link className="hover:text-brass" href="/about">About</Link>

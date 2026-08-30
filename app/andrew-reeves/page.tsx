@@ -49,18 +49,17 @@ export default function AndrewReevesPage() {
     <>
       {/* HERO ---------------------------------------------------------- */}
       <section className="mx-auto max-w-site px-5 pb-16 pt-20 md:px-8 md:pt-28">
-        <p className="eyebrow reveal">The practitioner behind The Hideout</p>
+        <p className="eyebrow reveal">The person behind The Hideout</p>
         <h1 className="display reveal mt-3 max-w-3xl text-5xl md:text-7xl">
           Andrew Reeves.
         </h1>
         <p className="display reveal mt-4 text-2xl text-brass md:text-3xl">
           Sound. Breath. Meditation.
         </p>
-        <p className="lede reveal mt-6 max-w-lg">
-          Every Hideout experience is designed and delivered personally by
-          Andrew — a qualified sound therapist and breathwork practitioner with
-          a genuine curiosity about how sound, breath, heat and cold feel when
-          you&apos;re given real space to experience them.
+        <p className="lede reveal mt-6 max-w-xl">
+          The Hideout grew from something that has been a big part of my own
+          life for years — exploring different ways to slow down, reset and
+          feel better.
         </p>
       </section>
 
@@ -69,19 +68,40 @@ export default function AndrewReevesPage() {
         <div className="grid gap-12 md:grid-cols-2">
           <div className="space-y-4 text-steam leading-relaxed">
             <p>
-              Andrew built The Hideout around a simple belief: wellbeing works
-              better when it&apos;s personal. Not a timetable of group classes.
-              Not one of forty mats in a hall. One practitioner, one space, and
-              the time to actually arrive.
+              Over the years I&apos;ve trained in many modalities, but my passion
+              is sound — and helping people. I&apos;ve also spent much of my
+              working life in a completely different world: construction,
+              utilities, project management, and now AI.
             </p>
             <p>
-              His practice combines traditional therapeutic instruments with
-              modern immersive audio and vibroacoustic technology — sound you
-              don&apos;t just hear, but physically feel.
+              That combination is probably what shaped The Hideout.
+            </p>
+            <p>
+              I wanted to create something that felt grounded and welcoming. Not
+              a clinical treatment room. Not a big commercial spa. And definitely
+              somewhere you don&apos;t need to know anything about wellness
+              before you walk through the door.
+            </p>
+            <p>
+              The Hideout is a private space I&apos;ve created in Crosby where I
+              can bring together some of the practices and experiences that have
+              meant the most to me — traditional sauna, cold water, breathwork,
+              meditation, immersive sound and vibroacoustic experiences.
+            </p>
+            <p>
+              You can come for something as simple as an hour in the sauna,
+              experience a sound journey, try breathwork for the first time, or
+              combine several elements into a longer session.
             </p>
             <p className="text-bone">
-              You can work with Andrew at The Hideout in Crosby — or he can
-              bring the sound to you.
+              There&apos;s no pressure to perform, achieve anything or be
+              &ldquo;good&rdquo; at any of it. Sometimes we just need somewhere
+              to switch off for a while. That&apos;s really what The Hideout is
+              about.
+            </p>
+            <p className="pt-2 font-display text-lg text-bone">
+              Andrew Reeves
+              <span className="block text-sm text-steam">Founder, The Hideout Liverpool</span>
             </p>
           </div>
           <ImagePanel label="Andrew with instruments in the sound room" ratio="aspect-[4/3]" />
