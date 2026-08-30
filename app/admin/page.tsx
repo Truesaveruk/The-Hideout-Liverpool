@@ -24,6 +24,12 @@ type Slot = {
 
 const SLOTS: Slot[] = [
   {
+    file: "sound-room.jpg",
+    what: "Purple sound room — the big background image behind the homepage headline",
+    where: "Homepage hero background (full-screen)",
+    shape: "wide"
+  },
+  {
     file: "sound-room-ai.jpg",
     what: "Main sound room — the site's hero image",
     where: "Homepage hero, Full Hideout Experience",
@@ -70,6 +76,24 @@ const SLOTS: Slot[] = [
     what: "Andrew working — frame drum",
     where: "Instrument detail slots",
     shape: "tall"
+  },
+  {
+    file: "crosby-beach.jpg",
+    what: "Crosby Beach / Another Place iron men",
+    where: "Visiting Liverpool page — top",
+    shape: "wide"
+  },
+  {
+    file: "liverpool-waterfront.jpg",
+    what: "Liverpool waterfront at dusk",
+    where: "Visiting Liverpool page — middle",
+    shape: "wide"
+  },
+  {
+    file: "crosby-coast.jpg",
+    what: "Crosby coastline, wide shot",
+    where: "Visiting Liverpool page — lower",
+    shape: "wide"
   },
   {
     file: "garden.jpg",

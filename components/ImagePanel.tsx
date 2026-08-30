@@ -10,43 +10,43 @@ import Image from "next/image";
  * shot is still needed. Never use stock resort imagery.
  */
 const PHOTOS: Record<string, string> = {
-  // --- Andrew at work (real sessions) ---
+  // --- Andrew at work (Andrew Reeves page) ---
   "the founder in the sound room": "/photos/andrew-gong.jpg",
   "Andrew with instruments in the sound room": "/photos/andrew-gong.jpg",
   "Andrew in the sound room": "/photos/andrew-gong.jpg",
   "instruments detail": "/photos/andrew-drum.jpg",
-  "bowls & gong detail": "/photos/andrew-gong.jpg",
+  "bowls & gong detail": "/photos/andrew-drum.jpg",
+  "sound bath set up in a yoga studio": "/photos/andrew-gong.jpg",
+  "group resting, studio setting": "/photos/andrew-drum-guest.jpg",
+  "breathwork session, candlelit room": "/photos/andrew-drum-guest.jpg",
+  "guest resting, soft blankets": "/photos/andrew-drum-guest.jpg",
 
-  // --- group / shared sessions ---
-  "group resting, studio setting": "/photos/sound-room-ai.jpg",
-  "sound bath set up in a yoga studio": "/photos/sound-room-ai.jpg",
-  "guest resting, soft blankets": "/photos/sound-bath-candles.jpg",
-  "breathwork session, candlelit room": "/photos/sound-room-green.jpg",
+  // --- homepage three-photo strip ---
+  "the Hideout entrance, warm light": "/photos/entrance.jpg",
+  "steam rising": "/photos/steam.jpg",
+  "tea by the fire": "/photos/tea-fire.jpg",
 
-  // --- the Hideout space itself ---
-  "sound room, instruments, low light": "/photos/sound-room-ai.jpg",
-  "the Hideout entrance, warm light": "/photos/sauna-exterior.jpg",
-  "the full Hideout space": "/photos/sound-room-ai.jpg",
-  "steam rising": "/photos/sauna-interior.jpg",
-  "tea by the fire": "/photos/andrew-gong.jpg",
+  // --- the Hideout space ---
+  "sound room, instruments, low light": "/photos/sound-room.jpg",
+  "the full Hideout space": "/photos/sound-room.jpg",
 
   // --- sauna & cold ---
   "sauna interior, warm light": "/photos/sauna-interior.jpg",
-  "sauna stove, glowing": "/photos/sauna-exterior.jpg",
+  "sauna stove, glowing": "/photos/sauna-interior.jpg",
   "two chairs, two teas, low light": "/photos/cold-plunge.jpg",
 
-  // --- couples / two-person ---
+  // --- couples ---
   "two mats, low light": "/photos/sound-room-purple.jpg",
   "couples session": "/photos/sound-room-green.jpg",
 
   // --- gift ---
   "voucher with dried botanicals, wood surface": "/photos/sound-room-purple-wide.jpg",
-  "gift voucher flat-lay, natural textures": "/photos/sound-room-purple-wide.jpg",
+  "gift voucher flat-lay, natural textures": "/photos/sound-bath-candles.jpg",
 
-  // --- outdoor / location ---
-  "Crosby coastline, wide shot": "/photos/garden.jpg",
-  "Another Place iron men, Crosby Beach": "/photos/garden.jpg",
-  "Liverpool waterfront at dusk": "/photos/garden.jpg"
+  // --- Visiting Liverpool page ---
+  "Another Place iron men, Crosby Beach": "/photos/crosby-beach.jpg",
+  "Liverpool waterfront at dusk": "/photos/liverpool-waterfront.jpg",
+  "Crosby coastline, wide shot": "/photos/crosby-coast.jpg"
 };
 
 export default function ImagePanel({

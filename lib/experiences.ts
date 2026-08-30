@@ -35,7 +35,7 @@ export const bookHref = (_e?: Experience) => site.bookingUrl;
 export const experiences: Experience[] = [
   {
     slug: "full-hideout",
-    photo: "/photos/sound-room-ai.jpg",
+    photo: "/photos/sound-room.jpg",
     number: "01",
     name: "The Full Hideout Experience",
     tagline: "Experience everything.",
@@ -103,7 +103,7 @@ export const experiences: Experience[] = [
   },
   {
     slug: "private-4-person-sound-bath",
-    photo: "/photos/sound-room-purple-wide.jpg",
+    photo: "/photos/group-sound-bath.jpg",
     number: "04",
     name: "Private 4 Person Sound Bath",
     tagline: "Bring your people. Lie back.",
@@ -124,7 +124,7 @@ export const experiences: Experience[] = [
   },
   {
     slug: "breathwork",
-    photo: "/photos/sound-bath-candles.jpg",
+    photo: "/photos/sound-room-purple.jpg",
     number: "05",
     name: "Private Breathwork",
     tagline: "Everything starts with a breath.",
@@ -172,7 +172,7 @@ export const saunaSessions: Experience[] = [
   },
   {
     slug: "private-sauna-hire",
-    photo: "/photos/sauna-exterior.jpg",
+    photo: "/photos/sauna-interior.jpg",
     number: "S2",
     name: "Private Sauna Hire",
     tagline: "The whole sauna. Just your group.",
@@ -215,7 +215,7 @@ export const sharedSessions: Experience[] = [
   },
   {
     slug: "sauna-sound-shared",
-    photo: "/photos/sauna-exterior.jpg",
+    photo: "/photos/sauna-interior.jpg",
     number: "G2",
     name: "Sauna & Sound — Shared",
     tagline: "From heat into stillness.",
@@ -231,7 +231,7 @@ export const sharedSessions: Experience[] = [
   },
   {
     slug: "full-journey-shared",
-    photo: "/photos/sound-room-ai.jpg",
+    photo: "/photos/sound-room.jpg",
     number: "G3",
     name: "The Full Journey — Shared",
     tagline: "The complete journey, shared.",
@@ -285,7 +285,7 @@ export const soundSessions: Experience[] = [
   },
   {
     slug: "private-4-person-sound-bath-p",
-    photo: "/photos/sound-room-purple-wide.jpg",
+    photo: "/photos/group-sound-bath.jpg",
     number: "SB3",
     name: "Private 4 Person Sound Bath",
     tagline: "Bring your people. Lie back.",
