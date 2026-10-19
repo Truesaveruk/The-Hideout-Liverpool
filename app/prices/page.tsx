@@ -4,6 +4,7 @@ import { conciergePricing } from "@/lib/site";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/prices" },
   title: "Prices — Private Hideout Experiences & Concierge Bookings",
   description:
     "Full pricing for The Hideout Liverpool — private experiences, sauna hire, sound baths, breathwork, shared sessions and concierge collection. Booked securely via Fresha."

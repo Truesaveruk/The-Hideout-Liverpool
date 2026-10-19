@@ -4,6 +4,7 @@ import { faqGroups } from "@/lib/faqs";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/faq" },
   title: "FAQ — Everything You Need to Know Before You Visit",
   description:
     "Answers about The Hideout Liverpool: privacy, the sauna and cold plunge, breathwork, vibroacoustic sound, what to bring, gift vouchers and how collection works for Liverpool visitors."

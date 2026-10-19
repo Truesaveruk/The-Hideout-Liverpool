@@ -49,6 +49,16 @@ const PHOTOS: Record<string, string> = {
   "Crosby coastline, wide shot": "/photos/crosby-coast.jpg"
 };
 
+/** Descriptive alt text for photos passed by path (helps Google Images). */
+const PATH_ALT: Record<string, string> = {
+  "/photos/sound-room.jpg": "The sound room at The Hideout Liverpool, Crosby",
+  "/photos/sound-room-purple.jpg": "Sound bath room with instruments at The Hideout Liverpool",
+  "/photos/sound-room-green.jpg": "Two vibroacoustic mats for a couples sound journey in Liverpool",
+  "/photos/group-sound-bath.jpg": "Mats laid out for a private group sound bath in Liverpool",
+  "/photos/sauna-interior.jpg": "Inside the private sauna at The Hideout Liverpool",
+  "/photos/cold-plunge.jpg": "Cold plunge ice bath at The Hideout Liverpool"
+};
+
 export default function ImagePanel({
   label,
   className = "",
@@ -61,13 +71,14 @@ export default function ImagePanel({
   // A label may be a direct path (e.g. "/photos/sauna-interior.jpg") or a
   // named slot from the PHOTOS map above.
   const src = label.startsWith("/photos/") ? label : PHOTOS[label];
+  const alt = label.startsWith("/photos/") ? PATH_ALT[label] ?? "The Hideout Liverpool" : `The Hideout Liverpool — ${label}`;
 
   if (src) {
     return (
       <div className={`relative overflow-hidden rounded-2xl border border-bone/10 ${ratio} ${className}`}>
         <Image
           src={src}
-          alt={`The Hideout Liverpool — ${label}`}
+          alt={alt}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover"

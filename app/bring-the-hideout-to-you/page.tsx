@@ -4,6 +4,7 @@ import ImagePanel from "@/components/ImagePanel";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/bring-the-hideout-to-you" },
   title: "Sound Immersion & Wellness Events at Your Space — Liverpool & Merseyside",
   description:
     "Bring the experience to you. Private sound immersion at your home, studio or venue across Liverpool and Merseyside — plus bespoke wellness days built around your group, workplace or event."

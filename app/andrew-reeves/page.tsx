@@ -4,6 +4,7 @@ import ImagePanel from "@/components/ImagePanel";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/andrew-reeves" },
   title: "Andrew Reeves — Sound Therapist & Breathwork Practitioner, Liverpool",
   description:
     "Andrew Reeves is the qualified sound therapist and breathwork practitioner behind The Hideout Liverpool. Book 1-2-1 sound therapy and breathwork in Crosby — or have the sound brought to your home, studio or workplace anywhere in the Liverpool area."

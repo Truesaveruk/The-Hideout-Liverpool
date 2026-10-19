@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import BookingWizard from "@/components/BookingWizard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/book" },
   title: "Book The Hideout — Private Wellness Experiences, Crosby, Liverpool",
   description:
     "Book your private Hideout experience — sauna, cold plunge, breathwork or immersive sound in Crosby, Liverpool. Collection available for visitors staying in Liverpool."

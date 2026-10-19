@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { landingPages } from "@/lib/landing";
 
 export default function SiteFooter() {
   return (
     <footer className="border-t border-bone/10 bg-smoke">
-      <div className="mx-auto grid max-w-site gap-10 px-5 py-14 md:grid-cols-3 md:px-8">
+      <div className="mx-auto grid max-w-site gap-10 px-5 py-14 md:grid-cols-4 md:px-8">
         <div>
           <Image
             src="/logo-wordmark.png"
@@ -34,6 +35,15 @@ export default function SiteFooter() {
           <Link className="hover:text-brass" href="/andrew-reeves">Andrew Reeves</Link>
           <Link className="hover:text-brass" href="/faq">FAQ</Link>
           <a className="hover:text-brass" href={site.bookingUrl} target="_blank" rel="noopener">Book</a>
+        </nav>
+
+        <nav aria-label="Popular" className="flex flex-col gap-2 text-sm text-steam">
+          <p className="field-label">Popular</p>
+          {landingPages.map((p) => (
+            <Link key={p.slug} className="hover:text-brass" href={`/${p.slug}`}>
+              {p.short}
+            </Link>
+          ))}
         </nav>
 
         <div className="text-sm text-steam">

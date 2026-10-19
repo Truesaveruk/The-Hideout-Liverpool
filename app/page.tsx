@@ -6,12 +6,15 @@ import ExperienceCard from "@/components/ExperienceCard";
 import ImagePanel from "@/components/ImagePanel";
 import JourneyThread from "@/components/JourneyThread";
 import { site } from "@/lib/site";
+import { landingPages } from "@/lib/landing";
 
 export const metadata: Metadata = {
-  title:
-    "Private Sauna, Cold Plunge & Sound Experiences in Crosby | The Hideout Liverpool",
+  alternates: { canonical: "/" },
+  title: {
+    absolute: "Private Sauna, Sound Bath & Breathwork Liverpool | The Hideout"
+  },
   description:
-    "Find your Hideout. A private wellness space in Crosby, Liverpool — sauna, cold plunge, breathwork and immersive sound. Private experiences, with limited shared sessions available."
+    "Private sauna, cold plunge, sound bath and breathwork in Crosby, Liverpool. For couples, solo guests and small groups. Sauna from £15. Collection from Liverpool hotels."
 };
 
 export default function HomePage() {
@@ -42,10 +45,15 @@ export default function HomePage() {
               className="relative h-auto w-64 md:w-80 mix-blend-screen"
             />
           </div>
-          <h1 className="display reveal mt-8 text-6xl md:text-8xl">
-            Find your
-            <br />
-            Hideout.
+          <h1 className="reveal mt-8">
+            <span className="eyebrow block">
+              Private sauna · Sound bath · Breathwork · Liverpool
+            </span>
+            <span className="display mt-4 block text-6xl md:text-8xl">
+              Find your
+              <br />
+              Hideout.
+            </span>
           </h1>
           <p className="lede reveal mt-6">
             A private wellness space in Crosby, Liverpool.
@@ -337,6 +345,22 @@ export default function HomePage() {
             Take a photo before or after if you like — then put your phone away.
             Some experiences don&apos;t need to be posted to be remembered.
           </p>
+        </div>
+      </section>
+
+      {/* POPULAR SEARCHES ---------------------------------------------- */}
+      <section className="mx-auto max-w-site px-5 py-16 md:px-8">
+        <p className="eyebrow reveal">Looking for something specific?</p>
+        <div className="reveal mt-6 flex flex-wrap gap-3">
+          {landingPages.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/${p.slug}`}
+              className="rounded-full border border-bone/15 px-5 py-2 text-sm text-steam transition-colors hover:border-brass hover:text-brass"
+            >
+              {p.short}
+            </Link>
+          ))}
         </div>
       </section>
 

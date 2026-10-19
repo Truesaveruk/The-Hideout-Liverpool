@@ -4,6 +4,7 @@ import ImagePanel from "@/components/ImagePanel";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/gift" },
   title: "Gift The Hideout — Private Wellness Experience Vouchers, Liverpool",
   description:
     "Give someone 90 minutes away from everything. Hideout gift vouchers cover private sauna, cold plunge, breathwork and immersive sound experiences in Crosby, Liverpool."
@@ -36,8 +37,8 @@ export default function GiftPage() {
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div>
             <p className="reveal max-w-md text-steam leading-relaxed">
-              Any Hideout experience can be given as a gift — from Sauna + Cold
-              to the full Immersive Sound Journey. They choose their date. We
+              Any Hideout experience can be given as a gift — from Private Sauna Hire
+              to the Full Hideout Experience. They choose their date. We
               take care of the rest.
             </p>
             <ul className="reveal mt-6 flex max-w-md flex-wrap gap-2">
@@ -59,8 +60,8 @@ export default function GiftPage() {
               >
                 Request a Gift Voucher
               </a>
-              <Link href="/experiences" className="btn-quiet">
-                See the experiences
+              <Link href="/experience-gifts-liverpool" className="btn-quiet">
+                Gift ideas
               </Link>
             </div>
             <p className="reveal mt-4 text-xs text-steam/70">

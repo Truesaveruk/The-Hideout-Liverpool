@@ -12,7 +12,7 @@ export const site = {
   phone: "", // e.g. "0151 000 0000" — add when confirmed
   email: "thehideoutliverpool@gmail.com", // replace with the live inbox
   bookingEmail: "thehideoutliverpool@gmail.com", // replace with the live inbox
-  url: "https://thehideoutliverpool.com", // replace with the live domain
+  url: "https://www.thehideoutliverpool.com", // live domain (www is primary on Vercel)
   instagram: "", // e.g. "https://instagram.com/thehideoutliverpool"
   collectionRadiusMiles: 8,
   // Live Fresha booking page — all BOOK buttons point here.

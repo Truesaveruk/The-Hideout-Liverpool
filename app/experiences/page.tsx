@@ -5,9 +5,10 @@ import ExperienceCard from "@/components/ExperienceCard";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Private Wellness Experiences — Sauna, Cold Plunge, Sound & Breathwork",
+  alternates: { canonical: "/experiences" },
+  title: "Private Wellness Experiences Liverpool — Sauna, Sound & Breathwork",
   description:
-    "Five private Hideout experiences in Crosby, Liverpool: Sauna + Cold, Sauna + Sound, the Immersive Sound Journey, Private Breathwork and the Full Hideout Experience."
+    "Private wellness experiences in Crosby, Liverpool: the Full Hideout Experience, 1-to-1 and couples sound journeys, private sound baths, breathwork and sauna hire."
 };
 
 export default function ExperiencesPage() {

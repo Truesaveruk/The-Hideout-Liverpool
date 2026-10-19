@@ -3,6 +3,7 @@ import Link from "next/link";
 import ImagePanel from "@/components/ImagePanel";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About — The Story Behind The Hideout",
   description:
     "The Hideout began with a simple idea: people need somewhere to switch off. A small, private wellness space in Crosby, Liverpool, combining traditional practices with modern sound and vibroacoustic technology."

@@ -5,6 +5,7 @@ import PartnerForm from "@/components/PartnerForm";
 import { conciergePricing, site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/visiting-liverpool" },
   title: "Visiting Liverpool? Private Wellness Experience with Collection",
   description:
     "Discover Liverpool's hidden wellness experience. Staying in a hotel, Airbnb or apartment? The Hideout Concierge collects you, delivers a private sauna, cold plunge and sound experience in Crosby, and returns you afterwards."
