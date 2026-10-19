@@ -10,8 +10,8 @@ export const site = {
   area: "Crosby, Liverpool",
   // NAP — keep identical everywhere (Google Business Profile, Bing, TripAdvisor)
   phone: "", // e.g. "0151 000 0000" — add when confirmed
-  email: "hello@thehideoutliverpool.com", // replace with the live inbox
-  bookingEmail: "bookings@thehideoutliverpool.com", // replace with the live inbox
+  email: "thehideoutliverpool@gmail.com", // replace with the live inbox
+  bookingEmail: "thehideoutliverpool@gmail.com", // replace with the live inbox
   url: "https://thehideoutliverpool.com", // replace with the live domain
   instagram: "", // e.g. "https://instagram.com/thehideoutliverpool"
   collectionRadiusMiles: 8,
